@@ -177,6 +177,13 @@ input:focus {
   gap: 0.65rem;
 }
 
+.command-row {
+  margin-top: 0.65rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+}
+
 .btn {
   border: none;
   border-radius: 14px;
@@ -206,6 +213,18 @@ input:focus {
   background: rgba(7, 24, 40, 0.66);
   color: #d6e6ff;
   border: 1px solid var(--line);
+}
+
+.btn-open {
+  background: linear-gradient(120deg, #56f0c0 0%, #18b48d 100%);
+  color: #041512;
+  box-shadow: 0 10px 22px rgba(24, 180, 141, 0.28);
+}
+
+.btn-close {
+  background: linear-gradient(120deg, #ff9f6b 0%, #ff6f7d 100%);
+  color: #200708;
+  box-shadow: 0 10px 22px rgba(255, 111, 125, 0.25);
 }
 
 .status-grid {
@@ -308,6 +327,10 @@ body.is-online .tile-status {
   }
 
   .btn {
+    width: 100%;
+  }
+
+  .command-row {
     width: 100%;
   }
 }

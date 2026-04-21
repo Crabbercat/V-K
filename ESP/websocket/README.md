@@ -1,73 +1,183 @@
-# ESP <-> PC WebSocket (Simple Example)
+# He thong IoT don gian: ESP32 + WebSocket + Web Dashboard
 
-This folder contains:
-- `esp_websocket_client/esp_websocket_client.ino`: ESP WebSocket client
-- `pc_ws_server.py`: WebSocket echo server on your computer
-- `requirements.txt`: Python dependency
+Tai lieu nay dung de ban quay lai nhin nhanh:
+- Muc tieu du an
+- Trang thai hien tai da lam den dau
+- Viec nao da xong, viec nao chua
+- Huong tiep theo de hoan thien he thong cua tu dong (servo)
 
-## 1) Run WebSocket server on PC
+## 1) Muc tieu du an
 
-1. Open terminal in this folder.
-2. Install dependency:
+Xay dung mot he thong IoT don gian co kha nang:
+1. Thu thap du lieu tu 2 cam bien:
+	 - LM35 (nhiet do)
+	 - HC-SR04 (khoang cach)
+2. Gui du lieu thoi gian thuc tu ESP32 den nguoi dung qua WebSocket.
+3. Hien thi du lieu tren giao dien web (dashboard).
+4. Dieu khien servo SG90 de mo/dong cua.
+5. Sau cung, bo sung che do tu dong dong/mo cua theo dieu kien cam bien.
 
-```bash
-pip install -r requirements.txt
-```
+## 2) Kien truc hien tai
 
-3. Start server:
+Luong du lieu dang hoat dong:
+1. ESP32 doc LM35 + HC-SR04.
+2. ESP32 gui JSON qua WebSocket den server Python tren PC.
+3. Server Python phat lai du lieu cho cac client khac.
+4. Web client nhan du lieu va cap nhat giao dien theo thoi gian thuc.
 
-```bash
-python pc_ws_server.py
-```
+Thanh phan trong thu muc nay:
+- esp_websocket_client/esp_websocket_client.ino
+	- Firmware chinh dang dung.
+	- Da co WiFi + WebSocket + doc LM35 + doc HC-SR04 + dieu khien servo.
+	- Da gui JSON dinh ky va nhan lenh SERVO:OPEN / SERVO:CLOSE.
+	- pc_ws_server.py
+	- WebSocket server tren PC.
+	- Port 8765: ESP gui du lieu vao.
+	- Port 8766: web client ket noi vao de nhan du lieu va gui lenh.
+		- Port 8000: frontend HTTP de mo UI tren bat ky thiet bi nao trong LAN.
+	- Co role infer co ban (ESP/WEB), echo lai cho sender va broadcast cho client khac.
+- web_client.html + web_client.css + web_client.js
+	- Dashboard web theo doi trang thai ket noi.
+	- Hien thi nhiet do, khoang cach, servo va nut dieu khien dong/mo.
+- esp_websocket_client/sg90_test.ino
+	- Test servo SG90 quay qua lai (test rieng, chua tich hop vao firmware chinh).
+- esp_websocket_client/lm35_d02_test.ino
+	- Test LM35 rieng.
+- esp_websocket_client/hcsr04_test.ino
+	- Test HC-SR04 rieng.
 
-You should see:
-- `Starting WebSocket server at ws://0.0.0.0:8765`
+## 3) Tien do hien tai
 
-## 2) Flash ESP sketch
+### 3.1 Phan da hoan thanh
 
-1. Open `esp_websocket_client.ino` in Arduino IDE.
-2. Install library:
-- **WebSockets** by Markus Sattler
-3. Update values in sketch:
-- `WIFI_SSID`
-- `WIFI_PASS`
-- `WS_HOST` = your computer local IP (example `192.168.1.100`)
-4. Wire `LM35` output pin to `GPIO34` (recommended for ESP32).
-5. Select your board ESP32 and upload.
-6. Open Serial Monitor at `115200` baud.
+	- Da co ket noi WiFi tren ESP32.
+	- Da co ket noi WebSocket ESP32 -> Python server.
+	- Da doc duoc LM35 va HC-SR04 tren ESP32.
+	- Da dong goi du lieu theo JSON va gui dinh ky moi 1 giay.
+	- Da co web dashboard hien thi:
+	- Trang thai online/offline
+	- Gia tri nhiet do
+	- Gia tri khoang cach
+		- Gia tri servo va trang thai open/closed
+	- Thoi diem cap nhat cuoi
+	- Da co sketch test servo SG90 doc lap de kiem tra phan cung.
 
-LM35 notes:
-- LM35 output uses `10mV / 1°C` and code converts `mV` to `°C`.
-- If you must use `D4` (GPIO4), note that it is `ADC2` and can be unstable while WiFi is on.
-- Recommended ESP32 analog pins for LM35 are `ADC1`: `GPIO32/33/34/35/36/39`.
+### 3.2 Phan chua hoan thanh
 
-## 3) Test connection
+	- Chua co co che tu dong dong/mo cua theo nguong cam bien.
+	- Chua co co che mode (MANUAL/AUTO) va uu tien an toan khi ra lenh.
+	- Chua co luu lich su du lieu hoac canh bao su kien.
 
-If successful:
-- PC terminal prints client connected and incoming messages.
-- ESP Serial Monitor shows connected and echo responses.
+### 3.3 Danh gia tong quan
 
-## 4) Open Web UI (for better display)
+Tien do tong the hien tai (uoc luong):
+- Khoang 80% cho muc tieu he thong IoT ban dau.
 
-1. Keep the server running:
+Ly do:
+- Data pipeline realtime da on (cam bien -> websocket -> web).
+- Phan quan trong con lai la control pipeline (web/server -> ESP -> servo) va auto-rule.
 
-```bash
-python pc_ws_server.py
-```
+## 4) Dinh dang du lieu dang gui
 
-2. Open this file in browser:
+ESP dang gui payload JSON dang:
 
-- `web_client.html`
+{
+	"device": "esp32",
+	"sensor": "environment",
+	"temperature_pin": 35,
+	"temperature_c": 30.12,
+	"distance_cm": 24.50,
+	"hcsr04_trig": 5,
+	"hcsr04_echo": 18
+}
 
-3. In the UI:
+Ghi chu:
+- Neu HC-SR04 timeout, distance_cm co the mang gia tri am (vi du -1).
+- Web client da co xu ly truong hop timeout va hien thong bao phu hop.
 
-- Set `WebSocket URL` (default: `ws://localhost:8765`)
-- Click **Kết nối**
-- Type message and click **Gửi**
-- Check realtime logs, TX/RX counters, and `Nhiệt độ (chan 4)` tile
+## 5) Cach chay he thong hien tai
 
-## Notes
+### 5.1 Chay server tren PC
 
-- Make sure ESP and PC are on the same local network.
-- Allow Python through Windows Firewall when prompted.
-- If connection fails, verify `WS_HOST`, port `8765`, and WiFi credentials.
+1. Cai dependency:
+
+	 pip install -r requirements.txt
+
+2. Chay server:
+
+	 python pc_ws_server.py
+
+3. Ket qua mong doi:
+- Server lang nghe tai ws://0.0.0.0:8765 va ws://0.0.0.0:8766
+- Frontend mo tai http://0.0.0.0:8000/
+
+### 5.2 Nap firmware cho ESP32
+
+1. Mo file esp_websocket_client/esp_websocket_client.ino trong Arduino IDE.
+2. Cai thu vien WebSockets (Markus Sattler).
+3. Cai them thu vien ESP32Servo.
+4. Sua thong tin:
+- WIFI_SSID
+- WIFI_PASS
+- WS_HOST (IP local cua may PC chay server)
+5. Chon board ESP32 va nap code.
+6. Mo Serial Monitor baud 115200 de theo doi log.
+
+### 5.3 Mo dashboard
+
+1. Mo file web_client.html tren trinh duyet.
+2. Hoac mo tu dien thoai/may khac bang URL: http://<IP_MAY_PC>:8000/
+3. Trang web se tu lay WebSocket host theo IP hien tai va dung port 8766.
+4. Bam Ket noi.
+5. Dung nut Mo cua / Dong cua de gui lenh servo.
+6. Quan sat du lieu nhiet do/khoang cach/servo realtime.
+
+## 6) Luat ky thuat quan trong
+
+- LM35 tren ESP32 nen uu tien ADC1 (GPIO32/33/34/35/36/39) de on dinh khi WiFi bat.
+- GPIO2/GPIO4 thuoc ADC2 co the dao dong gia tri khi WiFi hoat dong.
+- HC-SR04 can cap nguon dung va day mass chung voi ESP32.
+- ESP va PC phai cung mang LAN neu dung WS_HOST la IP noi bo.
+- Mo firewall neu Python bi chan cong 8765 hoac 8766.
+
+## 7) Ke hoach tiep theo (de dat muc tieu cua tu dong)
+
+Uu tien de xong theo thu tu sau:
+
+1. Bo sung logic tu dong dong/mo cua theo cam bien
+- Dung khoang cach lam dieu kien kich hoat.
+- Them hysteresis de tranh servo dao dong lien tuc.
+
+2. Nang cap dashboard
+- Them trang thai servo ro rang hon.
+- Neu can, them input goc servo thu cong.
+
+3. Hoan thien kenh lenh dieu khien servo qua WebSocket
+- Dinh nghia message command, vi du:
+	{"cmd":"door","mode":"manual","action":"open"}
+	{"cmd":"door","mode":"manual","action":"close"}
+
+4. Them mode MANUAL/AUTO va uu tien an toan
+- Manual command co the tam thoi override auto.
+- Neu mat du lieu cam bien hoac timeout dai -> ve trang thai an toan (dong cua).
+
+## 8) Checklist trien khai
+
+- [x] WebSocket server Python
+- [x] ESP gui data LM35
+- [x] ESP gui data HC-SR04
+- [x] Web dashboard hien thi data realtime
+- [x] Servo tich hop vao firmware chinh
+- [x] Web command -> ESP servo control
+- [ ] Auto open/close theo dieu kien cam bien
+- [ ] Mode MANUAL/AUTO
+- [ ] Log su kien va canh bao
+
+## 9) Moc cap nhat gan nhat
+
+Trang thai cap nhat gan nhat trong thu muc nay:
+- Pipeline cam bien realtime da chay thong.
+- Servo da co the dieu khien tu web qua WebSocket.
+- Muc tieu tiep theo ro rang: bo sung auto-rule cho dong/mo cua.
+
+Neu ban quay lai du an sau mot thoi gian, hay bat dau tu muc 7 va muc 8 de tiep tuc dung thu tu va de theo doi tien do.
