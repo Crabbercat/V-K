@@ -1,0 +1,6 @@
+{
+  "temperatureMin": 12.0,
+  "temperatureMax": 20.0,
+  "motionDelta": 0.5,
+  "decisionTimeoutSec": 10
+}

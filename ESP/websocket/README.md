@@ -36,9 +36,17 @@ Thanh phan trong thu muc nay:
 	- Port 8766: web client ket noi vao de nhan du lieu va gui lenh.
 		- Port 8000: frontend HTTP de mo UI tren bat ky thiet bi nao trong LAN.
 	- Co role infer co ban (ESP/WEB), echo lai cho sender va broadcast cho client khac.
+	- storage/
+		- temperature.csv: log nhiet do va khoang cach tu ESP.
+		- alerts.json: log cac canh bao va su kien tu giao dien.
+		- config.json: nguong nhiet do, tham so canh bao chuyen dong, timeout tu dong.
 - web_client.html + web_client.css + web_client.js
 	- Dashboard web theo doi trang thai ket noi.
-	- Hien thi nhiet do, khoang cach, servo va nut dieu khien dong/mo.
+		- Hien thi nhiet do, khoang cach, servo va nut dieu khien dong/mo.
+		- Co setting nguong nhiet do, nguong/cua so chuyen dong va timeout phan hoi.
+		- Co modal hoi mo/ dong cua khi nhiet do ra ngoai khoang cai dat.
+		- Neu khong phan hoi trong 10 giay (hoac timeout cai dat), he thong tu dong thuc hien.
+		- Co canh bao chuyen dong, danh sach su kien va bieu do duong nhiet do.
 - esp_websocket_client/sg90_test.ino
 	- Test servo SG90 quay qua lai (test rieng, chua tich hop vao firmware chinh).
 - esp_websocket_client/lm35_d02_test.ino
@@ -129,8 +137,16 @@ Ghi chu:
 2. Hoac mo tu dien thoai/may khac bang URL: http://<IP_MAY_PC>:8000/
 3. Trang web se tu lay WebSocket host theo IP hien tai va dung port 8766.
 4. Bam Ket noi.
-5. Dung nut Mo cua / Dong cua de gui lenh servo.
-6. Quan sat du lieu nhiet do/khoang cach/servo realtime.
+5. Chinh cac o setting neu can.
+6. Dung nut Mo cua / Dong cua de gui lenh servo.
+7. Quan sat du lieu nhiet do/khoang cach/servo realtime, bieu do va canh bao.
+
+### 5.4 Luu tru du lieu
+
+- Nhiet do va khoang cach tu ESP se duoc ghi vao storage/temperature.csv.
+- Cac canh bao/nhat ky su kien tu giao dien se duoc ghi vao storage/alerts.json.
+- Cac tham so canh bao duoc luu trong storage/config.json.
+- Neu muon xem file log truc tiep, mo theo duong dan HTTP cung host: http://<IP_MAY_PC>:8000/storage/temperature.csv va http://<IP_MAY_PC>:8000/storage/alerts.json va http://<IP_MAY_PC>:8000/storage/config.json.
 
 ## 6) Luat ky thuat quan trong
 
@@ -149,8 +165,8 @@ Uu tien de xong theo thu tu sau:
 - Them hysteresis de tranh servo dao dong lien tuc.
 
 2. Nang cap dashboard
-- Them trang thai servo ro rang hon.
-- Neu can, them input goc servo thu cong.
+- The hien nhat ky theo nhom su kien ro rang hon.
+- Neu can, them loc thoi gian cho bieu do va canh bao.
 
 3. Hoan thien kenh lenh dieu khien servo qua WebSocket
 - Dinh nghia message command, vi du:
@@ -169,9 +185,9 @@ Uu tien de xong theo thu tu sau:
 - [x] Web dashboard hien thi data realtime
 - [x] Servo tich hop vao firmware chinh
 - [x] Web command -> ESP servo control
-- [ ] Auto open/close theo dieu kien cam bien
+- [x] Auto open/close theo dieu kien cam bien
 - [ ] Mode MANUAL/AUTO
-- [ ] Log su kien va canh bao
+- [x] Log su kien va canh bao
 
 ## 9) Moc cap nhat gan nhat
 
@@ -181,3 +197,59 @@ Trang thai cap nhat gan nhat trong thu muc nay:
 - Muc tieu tiep theo ro rang: bo sung auto-rule cho dong/mo cua.
 
 Neu ban quay lai du an sau mot thoi gian, hay bat dau tu muc 7 va muc 8 de tiep tuc dung thu tu va de theo doi tien do.
+
+
+Các trạng thái chính
+1. IDLE (trạng thái chờ)
+Chức năng:
+Đọc:
+Khoảng cách
+Nhiệt độ
+Trạng thái servo
+Chuyển trạng thái:
+T > Tmax → ASK_OPEN
+T < Tmin → ASK_CLOSE
+Có thay đổi khoảng cách bất thường → MOTION_DETECTED
+User click open → OPENING
+User click close → CLOSING
+2. ASK_OPEN (hỏi mở cửa)
+Chức năng:
+Gửi yêu cầu mở cửa
+Bắt đầu timeout
+Chờ phản hồi người dùng
+Chuyển:
+User accept hoặc timeout → OPENING
+User decline → ASK_CLOSE
+3. ASK_CLOSE (hỏi đóng cửa)
+Chức năng:
+Gửi yêu cầu đóng cửa
+Bắt đầu timeout
+Chờ phản hồi
+Chuyển:
+User accept hoặc timeout → CLOSING
+User decline → IDLE
+4. OPENING (đang mở cửa)
+Chức năng:
+Motor quay thuận (mở)
+Theo dõi vị trí
+Dừng khi mở hoàn toàn
+Chuyển:
+Fully open → STOP
+5. CLOSING (đang đóng cửa)
+Chức năng:
+Motor quay ngược (đóng)
+Theo dõi vị trí
+Dừng khi đóng hoàn toàn
+Chuyển:
+Fully close → STOP
+6. STOP (dừng motor)
+Chức năng:
+Ngắt motor
+Chuyển:
+Sau khi dừng → quay về IDLE
+7. MOTION_DETECTED (phát hiện chuyển động)
+Chức năng:
+Phát hiện khoảng cách bất thường
+Kích hoạt cảnh báo / an toàn
+Chuyển:
+User close alert → quay về IDLE

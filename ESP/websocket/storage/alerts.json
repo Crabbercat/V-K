@@ -1,0 +1,274 @@
+{
+  "alerts": [
+    {
+      "timestamp": 1776799891971,
+      "kind": "info",
+      "title": "Cập nhật cấu hình",
+      "detail": "Nhiệt độ [25.0 - 30.0]°C, cửa sổ chuyển động 5 mẫu, timeout 10s."
+    },
+    {
+      "timestamp": 1776799984415,
+      "kind": "temp",
+      "title": "Cảnh báo nhiệt độ thấp",
+      "detail": "Nhiệt độ 14.2°C thấp hơn ngưỡng dưới 25.0°C."
+    },
+    {
+      "timestamp": 1776799989494,
+      "kind": "info",
+      "title": "Người dùng từ chối",
+      "detail": "Người dùng từ chối đóng cửa khi nhiệt độ thấp."
+    },
+    {
+      "timestamp": 1776799991828,
+      "kind": "info",
+      "title": "Cập nhật cấu hình",
+      "detail": "Nhiệt độ [12.0 - 15.0]°C, cửa sổ chuyển động 5 mẫu, timeout 10s."
+    },
+    {
+      "timestamp": 1776799992467,
+      "kind": "temp",
+      "title": "Nhiệt độ về bình thường",
+      "detail": "Nhiệt độ 14.2°C đã quay lại trong vùng 12.0 - 15.0°C."
+    },
+    {
+      "timestamp": 1776800003775,
+      "kind": "info",
+      "title": "Cập nhật cấu hình",
+      "detail": "Nhiệt độ [12.0 - 16.0]°C, cửa sổ chuyển động 5 mẫu, timeout 10s."
+    },
+    {
+      "timestamp": 1776800007763,
+      "kind": "info",
+      "title": "Cập nhật cấu hình",
+      "detail": "Nhiệt độ [12.0 - 13.0]°C, cửa sổ chuyển động 5 mẫu, timeout 10s."
+    },
+    {
+      "timestamp": 1776800008468,
+      "kind": "temp",
+      "title": "Cảnh báo nhiệt độ cao",
+      "detail": "Nhiệt độ 14.2°C vượt ngưỡng trên 13.0°C."
+    },
+    {
+      "timestamp": 1776800018476,
+      "kind": "info",
+      "title": "Điều khiển cửa",
+      "detail": "Đã mở cửa (tự động do hết thời gian phản hồi)."
+    },
+    {
+      "timestamp": 1776800034228,
+      "kind": "info",
+      "title": "Cập nhật cấu hình",
+      "detail": "Nhiệt độ [15.0 - 20.0]°C, cửa sổ chuyển động 5 mẫu, timeout 10s."
+    },
+    {
+      "timestamp": 1776800034376,
+      "kind": "temp",
+      "title": "Cảnh báo nhiệt độ thấp",
+      "detail": "Nhiệt độ 14.2°C thấp hơn ngưỡng dưới 15.0°C."
+    },
+    {
+      "timestamp": 1776800040130,
+      "kind": "info",
+      "title": "Điều khiển cửa",
+      "detail": "Đã đóng cửa (người dùng xác nhận)."
+    },
+    {
+      "timestamp": 1776800085976,
+      "kind": "info",
+      "title": "Cập nhật cấu hình",
+      "detail": "Nhiệt độ [10.0 - 20.0]°C, cửa sổ chuyển động 5 mẫu, timeout 10s."
+    },
+    {
+      "timestamp": 1776800086767,
+      "kind": "temp",
+      "title": "Nhiệt độ về bình thường",
+      "detail": "Nhiệt độ 14.2°C đã quay lại trong vùng 10.0 - 20.0°C."
+    },
+    {
+      "timestamp": 1776800092032,
+      "kind": "info",
+      "title": "Cập nhật cấu hình",
+      "detail": "Nhiệt độ [15.0 - 20.0]°C, cửa sổ chuyển động 5 mẫu, timeout 10s."
+    },
+    {
+      "timestamp": 1776800092767,
+      "kind": "temp",
+      "title": "Cảnh báo nhiệt độ thấp",
+      "detail": "Nhiệt độ 14.2°C thấp hơn ngưỡng dưới 15.0°C."
+    },
+    {
+      "timestamp": 1776800095629,
+      "kind": "info",
+      "title": "Người dùng từ chối",
+      "detail": "Người dùng từ chối đóng cửa khi nhiệt độ thấp."
+    },
+    {
+      "timestamp": 1776800564218,
+      "kind": "info",
+      "title": "Cập nhật cấu hình",
+      "detail": "Nhiệt độ [12.0 - 20.0]°C, cửa sổ chuyển động cố định 5 mẫu, timeout 10s."
+    },
+    {
+      "timestamp": 1776800623372,
+      "kind": "info",
+      "title": "Điều khiển thủ công",
+      "detail": "Người dùng đã gửi lệnh mở cửa."
+    },
+    {
+      "timestamp": 1776800628745,
+      "kind": "info",
+      "title": "Điều khiển thủ công",
+      "detail": "Người dùng đã gửi lệnh đóng cửa."
+    },
+    {
+      "timestamp": 1776800997926,
+      "kind": "temp",
+      "title": "Cảnh báo nhiệt độ thấp",
+      "detail": "Nhiệt độ 14.2°C thấp hơn ngưỡng dưới 15.0°C."
+    },
+    {
+      "timestamp": 1776801003587,
+      "kind": "info",
+      "title": "Người dùng từ chối",
+      "detail": "Người dùng từ chối đóng cửa khi nhiệt độ thấp."
+    },
+    {
+      "timestamp": 1776801008980,
+      "kind": "info",
+      "title": "Cập nhật cấu hình",
+      "detail": "Nhiệt độ [12.0 - 20.0]°C, cửa sổ chuyển động cố định 5 mẫu, timeout 10s."
+    },
+    {
+      "timestamp": 1776801009921,
+      "kind": "temp",
+      "title": "Nhiệt độ về bình thường",
+      "detail": "Nhiệt độ 14.2°C đã quay lại trong vùng 12.0 - 20.0°C."
+    },
+    {
+      "timestamp": 1776801096640,
+      "kind": "info",
+      "title": "Cập nhật cấu hình",
+      "detail": "Nhiệt độ [20.0 - 20.0]°C, cửa sổ chuyển động cố định 5 mẫu, timeout 10s."
+    },
+    {
+      "timestamp": 1776801096925,
+      "kind": "temp",
+      "title": "Cảnh báo nhiệt độ thấp",
+      "detail": "Nhiệt độ 14.2°C thấp hơn ngưỡng dưới 20.0°C."
+    },
+    {
+      "timestamp": 1776801106934,
+      "kind": "info",
+      "title": "Điều khiển cửa",
+      "detail": "Đã đóng cửa (tự động do hết thời gian phản hồi)."
+    },
+    {
+      "timestamp": 1776801110567,
+      "kind": "temp",
+      "title": "Cảnh báo nhiệt độ thấp",
+      "detail": "Nhiệt độ 14.2°C thấp hơn ngưỡng dưới 20.0°C."
+    },
+    {
+      "timestamp": 1776801118974,
+      "kind": "info",
+      "title": "Người dùng từ chối",
+      "detail": "Người dùng từ chối đóng cửa khi nhiệt độ thấp."
+    },
+    {
+      "timestamp": 1776801149870,
+      "kind": "info",
+      "title": "Cập nhật cấu hình",
+      "detail": "Nhiệt độ [15.0 - 20.0]°C, cửa sổ chuyển động cố định 5 mẫu, timeout 10s."
+    },
+    {
+      "timestamp": 1776801158685,
+      "kind": "info",
+      "title": "Cập nhật cấu hình",
+      "detail": "Nhiệt độ [10.0 - 20.0]°C, cửa sổ chuyển động cố định 5 mẫu, timeout 10s."
+    },
+    {
+      "timestamp": 1776801159511,
+      "kind": "temp",
+      "title": "Nhiệt độ về bình thường",
+      "detail": "Nhiệt độ 14.2°C đã quay lại trong vùng 10.0 - 20.0°C."
+    },
+    {
+      "timestamp": 1776801164183,
+      "kind": "info",
+      "title": "Cập nhật cấu hình",
+      "detail": "Nhiệt độ [15.0 - 20.0]°C, cửa sổ chuyển động cố định 5 mẫu, timeout 10s."
+    },
+    {
+      "timestamp": 1776801164527,
+      "kind": "temp",
+      "title": "Cảnh báo nhiệt độ thấp",
+      "detail": "Nhiệt độ 14.2°C thấp hơn ngưỡng dưới 15.0°C."
+    },
+    {
+      "timestamp": 1776801173368,
+      "kind": "info",
+      "title": "Điều khiển cửa",
+      "detail": "Đã đóng cửa (người dùng xác nhận)."
+    },
+    {
+      "timestamp": 1776801558835,
+      "kind": "info",
+      "title": "Điều khiển thủ công",
+      "detail": "Người dùng đã gửi lệnh mở cửa."
+    },
+    {
+      "timestamp": 1776805244444,
+      "kind": "info",
+      "title": "Điều khiển thủ công",
+      "detail": "Người dùng đã gửi lệnh mở cửa."
+    },
+    {
+      "timestamp": 1776805267498,
+      "kind": "temp",
+      "title": "Cảnh báo nhiệt độ thấp",
+      "detail": "Nhiệt độ 14.2°C thấp hơn ngưỡng dưới 15.0°C."
+    },
+    {
+      "timestamp": 1776805269936,
+      "kind": "info",
+      "title": "Người dùng từ chối",
+      "detail": "Người dùng từ chối đóng cửa khi nhiệt độ thấp."
+    },
+    {
+      "timestamp": 1776805274018,
+      "kind": "info",
+      "title": "Cập nhật cấu hình",
+      "detail": "Nhiệt độ [12.0 - 20.0]°C, cửa sổ chuyển động cố định 5 mẫu, timeout 10s."
+    },
+    {
+      "timestamp": 1776805274544,
+      "kind": "temp",
+      "title": "Nhiệt độ về bình thường",
+      "detail": "Nhiệt độ 14.2°C đã quay lại trong vùng 12.0 - 20.0°C."
+    },
+    {
+      "timestamp": 1776805483472,
+      "kind": "info",
+      "title": "Cập nhật cấu hình",
+      "detail": "Nhiệt độ [12.0 - 20.0]°C, cửa sổ chuyển động cố định 5 mẫu, timeout 10s."
+    },
+    {
+      "timestamp": 1776805816536,
+      "kind": "temp",
+      "title": "Cảnh báo nhiệt độ cao",
+      "detail": "Nhiệt độ 22.7°C vượt ngưỡng trên 20.0°C."
+    },
+    {
+      "timestamp": 1776805817533,
+      "kind": "temp",
+      "title": "Nhiệt độ về bình thường",
+      "detail": "Nhiệt độ 14.2°C đã quay lại trong vùng 12.0 - 20.0°C."
+    },
+    {
+      "timestamp": 1776805859312,
+      "kind": "info",
+      "title": "Điều khiển cửa",
+      "detail": "Đã mở cửa (tự động do hết thời gian phản hồi)."
+    }
+  ]
+}
