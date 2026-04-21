@@ -2,20 +2,18 @@
   #include <WebSocketsClient.h>
   #include <ESP32Servo.h>
 
-  // ====== Update these values ======
+  // ====== CONFIG ======
   const char* WIFI_SSID = "BI BIT";
   const char* WIFI_PASS = "abcd1234";
-  const char* WS_HOST = "192.168.1.77";  // PC local IP
+  const char* WS_HOST = "192.168.1.94";
   const uint16_t WS_PORT = 8765;
   const char* WS_PATH = "/";
 
-  // ESP32: prefer ADC1 pin for analog reading while WiFi is enabled.
-  // D4 on many ESP32 boards maps to GPIO4 (ADC2) and may be unstable with WiFi.
   const uint8_t TEMP_SENSOR_PIN = 35;
   const uint8_t HC_TRIG_PIN = 5;
   const uint8_t HC_ECHO_PIN = 18;
   const uint8_t SERVO_PIN = 19;
-  const int SERVO_OPEN_ANGLE = 180;
+  const int SERVO_OPEN_ANGLE = 90;
   const int SERVO_CLOSED_ANGLE = 0;
   const int SERVO_STEP_DELAY_MS = 8;
   const uint32_t SEND_INTERVAL_MS = 1000;
@@ -44,6 +42,7 @@
   }
 
   void updateServoAngle(int targetAngle) {
+    targerAngle = 90 - targerAngle
     targetAngle = constrain(targetAngle, 0, 180);
 
     if (!doorServo.attached()) {
