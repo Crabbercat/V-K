@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bảng Theo Dõi Cảm Biến ESP</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./web_client.css?v=20260420-5" />
+</head>
+<body>
+  <div class="bg-gradient"></div>
+  <div class="noise"></div>
+  <div class="bg-orb orb-a"></div>
+  <div class="bg-orb orb-b"></div>
+  <div class="bg-orb orb-c"></div>
+
+  <main class="dashboard">
+    <header class="hero card reveal">
+      <div class="hero-top">
+        <p class="eyebrow">DỮ LIỆU THỜI GIAN THỰC</p>
+        <p class="live-chip">ĐANG CHẠY</p>
+      </div>
+      <h1>Bảng Theo Dõi Cảm Biến ESP</h1>
+      <p class="subtitle">Theo dõi đồng thời nhiệt độ và khoảng cách.</p>
+    </header>
+
+    <section class="controls card reveal">
+      <div class="field-group">
+        <label for="wsUrl">Địa chỉ WebSocket</label>
+        <input id="wsUrl" type="text" value="ws://localhost:8765" placeholder="ws://localhost:8765" />
+      </div>
+
+      <div class="button-row">
+        <button id="connectBtn" class="btn btn-primary" type="button">Kết nối</button>
+        <button id="disconnectBtn" class="btn btn-ghost" type="button" disabled>Ngắt kết nối</button>
+      </div>
+    </section>
+
+    <section class="status-grid reveal">
+      <article class="status-tile card tile-status">
+        <p class="tile-label">Trạng thái kết nối</p>
+        <p id="connectionStatus" class="tile-value status-offline">Ngoại tuyến</p>
+      </article>
+
+      <article class="status-tile card tile-temp">
+        <p id="temperatureLabel" class="tile-label">Nhiệt độ LM35</p>
+        <p id="temperatureValue" class="tile-value major">--.- <span class="unit">°C</span></p>
+      </article>
+
+      <article class="status-tile card tile-distance">
+        <p id="distanceLabel" class="tile-label">Khoảng cách HC-SR04</p>
+        <p id="distanceValue" class="tile-value major">--.- <span class="unit">cm</span></p>
+      </article>
+
+      <article class="status-tile card tile-updated">
+        <p class="tile-label">Cập nhật lần cuối</p>
+        <p id="updatedAt" class="tile-value">--:--:--</p>
+      </article>
+    </section>
+  </main>
+
+  <script src="./web_client.js?v=20260420-5"></script>
+</body>
+</html>

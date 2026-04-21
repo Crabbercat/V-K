@@ -32,14 +32,39 @@ You should see:
 - `WIFI_SSID`
 - `WIFI_PASS`
 - `WS_HOST` = your computer local IP (example `192.168.1.100`)
-4. Select your board ESP32 and upload.
-5. Open Serial Monitor at `115200` baud.
+4. Wire `LM35` output pin to `GPIO34` (recommended for ESP32).
+5. Select your board ESP32 and upload.
+6. Open Serial Monitor at `115200` baud.
+
+LM35 notes:
+- LM35 output uses `10mV / 1°C` and code converts `mV` to `°C`.
+- If you must use `D4` (GPIO4), note that it is `ADC2` and can be unstable while WiFi is on.
+- Recommended ESP32 analog pins for LM35 are `ADC1`: `GPIO32/33/34/35/36/39`.
 
 ## 3) Test connection
 
 If successful:
 - PC terminal prints client connected and incoming messages.
 - ESP Serial Monitor shows connected and echo responses.
+
+## 4) Open Web UI (for better display)
+
+1. Keep the server running:
+
+```bash
+python pc_ws_server.py
+```
+
+2. Open this file in browser:
+
+- `web_client.html`
+
+3. In the UI:
+
+- Set `WebSocket URL` (default: `ws://localhost:8765`)
+- Click **Kết nối**
+- Type message and click **Gửi**
+- Check realtime logs, TX/RX counters, and `Nhiệt độ (chan 4)` tile
 
 ## Notes
 
