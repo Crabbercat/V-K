@@ -42,7 +42,7 @@
   }
 
   void updateServoAngle(int targetAngle) {
-    targerAngle = 90 - targerAngle
+    targetAngle = 90 - targetAngle;
     targetAngle = constrain(targetAngle, 0, 180);
 
     if (!doorServo.attached()) {
