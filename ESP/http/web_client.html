@@ -1,0 +1,94 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Plant Control Dashboard</title>
+  <link rel="stylesheet" href="web_client.css">
+</head>
+<body>
+  <header class="hero">
+    <div>
+      <p class="eyebrow">ESP32 HTTP Control</p>
+      <h1>Plant Control Dashboard</h1>
+      <p class="subtitle">ESP reports sensor data every 3 seconds. Buttons send direct requests to the server, then to the device.</p>
+    </div>
+    <div class="hero-badge" id="command_status">Idle</div>
+  </header>
+
+  <main class="layout">
+    <section class="panel status-panel">
+      <div class="panel-head">
+        <h2>4 Trạng Thái</h2>
+        <button id="btn_refresh" class="ghost">Refresh</button>
+      </div>
+      <div class="status-grid">
+        <article class="status-card">
+          <span class="label">Temperature</span>
+          <strong id="temp">--</strong>
+          <span class="unit">°C</span>
+        </article>
+        <article class="status-card">
+          <span class="label">Soil Moisture</span>
+          <strong id="soil">--</strong>
+          <span class="unit">ADC</span>
+        </article>
+        <article class="status-card">
+          <span class="label">Heater</span>
+          <strong id="heater">--</strong>
+          <span class="unit">On / Off</span>
+        </article>
+        <article class="status-card">
+          <span class="label">Servo</span>
+          <strong id="servo">--</strong>
+          <span class="unit">Angle / Valve</span>
+        </article>
+      </div>
+      <div class="meta-row">
+        <span>Water valve: <b id="water">--</b></span>
+        <span>Last update: <b id="last_update">--</b></span>
+      </div>
+    </section>
+
+    <section class="panel commands-panel">
+      <div class="panel-head">
+        <h2>Lệnh điều khiển</h2>
+        <p class="panel-note">Bấm nút để gửi yêu cầu trực tiếp. Nếu ESP xác nhận trong vòng chờ, UI báo thành công. Nếu không, báo lỗi.</p>
+      </div>
+      <div class="command-groups">
+        <div class="command-group">
+          <h3>Đèn</h3>
+          <div class="button-row">
+            <button class="action" data-command="heater" data-value="true">Bật đèn</button>
+            <button class="action secondary" data-command="heater" data-value="false">Tắt đèn</button>
+          </div>
+        </div>
+        <div class="command-group">
+          <h3>Servo</h3>
+          <div class="button-row">
+            <button class="action" data-command="servo" data-value="open">Mở servo</button>
+            <button class="action secondary" data-command="servo" data-value="close">Đóng servo</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel history-panel">
+      <div class="panel-head">
+        <h2>Lịch sử CSV</h2>
+        <p class="panel-note">Dữ liệu được đọc từ file `storage/temperature.csv`.</p>
+      </div>
+      <div class="table-wrap">
+        <table id="csv_table">
+          <thead>
+            <tr><th>Time</th><th>Temp</th><th>Soil</th><th>Heater</th><th>Servo</th><th>Valve</th></tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <script src="web_client.js"></script>
+</body>
+</html>

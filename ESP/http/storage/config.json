@@ -1,0 +1,9 @@
+{
+  "temp_low": 18,
+  "hum_low": 40,
+  "servo_open_angle": 90,
+  "servo_closed_angle": 0,
+  "soil_dry": 2000,
+  "soil_wet": 3000,
+  "heater_pin": 2
+}

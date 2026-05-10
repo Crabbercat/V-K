@@ -1,0 +1,3853 @@
+[
+  {
+    "timestamp": "2026-05-10T12:14:03.110354",
+    "temperature": 37.6,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T12:14:13.010906",
+    "temperature": 38,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T12:14:22.843782",
+    "temperature": 37.1,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T12:15:38.032511",
+    "temperature": 37.7,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T12:15:48.025882",
+    "temperature": 36.6,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T12:15:58.021260",
+    "temperature": 38.6,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T12:16:08.028566",
+    "temperature": 35.3,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T12:16:18.141076",
+    "temperature": 38.5,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T12:16:28.040375",
+    "temperature": 38.4,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T12:16:38.265212",
+    "temperature": 37.4,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T12:16:48.031204",
+    "temperature": 36.9,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T12:16:58.060828",
+    "temperature": 42.4,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T12:17:08.128844",
+    "temperature": 37.1,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T12:17:18.165665",
+    "temperature": 37.1,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T12:17:28.024623",
+    "temperature": 38.3,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T12:17:38.216587",
+    "temperature": 38.3,
+    "soilMoisture": 3050,
+    "heaterStatus": false,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T12:17:48.149838",
+    "temperature": 37,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T12:17:58.081074",
+    "temperature": 38.3,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T12:18:08.189952",
+    "temperature": 36.9,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T12:18:18.051005",
+    "temperature": 37.3,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T12:18:28.187301",
+    "temperature": 38.2,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T12:18:38.323779",
+    "temperature": 36.8,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T12:18:48.099787",
+    "temperature": 37.1,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T12:18:58.093461",
+    "temperature": 36.8,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T12:19:08.019860",
+    "temperature": 36.5,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T12:19:18.157553",
+    "temperature": 38.2,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T12:19:28.294480",
+    "temperature": 37.9,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T12:19:38.033961",
+    "temperature": 36.8,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T12:19:48.021484",
+    "temperature": 38,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T12:19:58.091440",
+    "temperature": 38.1,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T12:20:08.090034",
+    "temperature": 38,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T12:20:18.099819",
+    "temperature": 37,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T12:20:28.030557",
+    "temperature": 37.9,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T12:20:38.131252",
+    "temperature": 37.1,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T12:20:48.110843",
+    "temperature": 36.9,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T12:20:58.051247",
+    "temperature": 37.9,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T12:21:08.033033",
+    "temperature": 36.6,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T12:21:18.031333",
+    "temperature": 38.3,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T12:21:28.100498",
+    "temperature": 38.7,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T12:21:38.020292",
+    "temperature": 38.3,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T12:21:48.217674",
+    "temperature": 37.9,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T12:21:58.019099",
+    "temperature": 37.8,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T12:22:08.459295",
+    "temperature": 37.9,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T12:22:18.022836",
+    "temperature": 37,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T12:22:28.142669",
+    "temperature": 36.7,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T12:22:38.016558",
+    "temperature": 36.6,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T12:22:48.112781",
+    "temperature": 37.9,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T12:22:58.418742",
+    "temperature": 36.8,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T12:23:08.185570",
+    "temperature": 37,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T12:23:18.107872",
+    "temperature": 37.9,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T12:23:28.043334",
+    "temperature": 36.9,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T12:23:38.026329",
+    "temperature": 36.5,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T12:23:48.077892",
+    "temperature": 37.8,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T12:23:58.338562",
+    "temperature": 36.7,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T12:24:08.021995",
+    "temperature": 36.5,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T12:24:18.182755",
+    "temperature": 42.4,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T12:24:28.118908",
+    "temperature": 36.4,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:25:31.818658",
+    "temperature": 40.6,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 90,
+    "waterValve": true
+  },
+  {
+    "timestamp": "2026-05-10T15:25:33.354586",
+    "temperature": 34.9,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 90,
+    "waterValve": true
+  },
+  {
+    "timestamp": "2026-05-10T15:25:36.810639",
+    "temperature": 34.9,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 90,
+    "waterValve": true
+  },
+  {
+    "timestamp": "2026-05-10T15:25:39.562973",
+    "temperature": 38.9,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 90,
+    "waterValve": true
+  },
+  {
+    "timestamp": "2026-05-10T15:25:42.735287",
+    "temperature": 37.4,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 90,
+    "waterValve": true
+  },
+  {
+    "timestamp": "2026-05-10T15:25:45.941557",
+    "temperature": 34.8,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 90,
+    "waterValve": true
+  },
+  {
+    "timestamp": "2026-05-10T15:25:48.582307",
+    "temperature": 34.8,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 90,
+    "waterValve": true
+  },
+  {
+    "timestamp": "2026-05-10T15:25:51.534355",
+    "temperature": 38.8,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 90,
+    "waterValve": true
+  },
+  {
+    "timestamp": "2026-05-10T15:25:54.306293",
+    "temperature": 34.6,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 90,
+    "waterValve": true
+  },
+  {
+    "timestamp": "2026-05-10T15:25:57.633749",
+    "temperature": 34.6,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 90,
+    "waterValve": true
+  },
+  {
+    "timestamp": "2026-05-10T15:26:00.232520",
+    "temperature": 38.6,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 90,
+    "waterValve": true
+  },
+  {
+    "timestamp": "2026-05-10T15:26:03.889732",
+    "temperature": 34.3,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 90,
+    "waterValve": true
+  },
+  {
+    "timestamp": "2026-05-10T15:26:06.492166",
+    "temperature": 34.5,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 90,
+    "waterValve": true
+  },
+  {
+    "timestamp": "2026-05-10T15:26:10.123402",
+    "temperature": 38.8,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 90,
+    "waterValve": true
+  },
+  {
+    "timestamp": "2026-05-10T15:26:12.327434",
+    "temperature": 38.7,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 90,
+    "waterValve": true
+  },
+  {
+    "timestamp": "2026-05-10T15:26:18.695543",
+    "temperature": 34.6,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 90,
+    "waterValve": true
+  },
+  {
+    "timestamp": "2026-05-10T15:26:21.865134",
+    "temperature": 33.9,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 90,
+    "waterValve": true
+  },
+  {
+    "timestamp": "2026-05-10T15:26:22.014114",
+    "temperature": 30.2,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 90,
+    "waterValve": true
+  },
+  {
+    "timestamp": "2026-05-10T15:26:25.231524",
+    "temperature": 38.7,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 90,
+    "waterValve": true
+  },
+  {
+    "timestamp": "2026-05-10T15:26:28.658347",
+    "temperature": 34.5,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 90,
+    "waterValve": true
+  },
+  {
+    "timestamp": "2026-05-10T15:26:31.179031",
+    "temperature": 35.5,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 90,
+    "waterValve": true
+  },
+  {
+    "timestamp": "2026-05-10T15:26:34.412576",
+    "temperature": 38,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 90,
+    "waterValve": true
+  },
+  {
+    "timestamp": "2026-05-10T15:26:37.125434",
+    "temperature": 38.6,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 90,
+    "waterValve": true
+  },
+  {
+    "timestamp": "2026-05-10T15:26:40.087389",
+    "temperature": 34.1,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 90,
+    "waterValve": true
+  },
+  {
+    "timestamp": "2026-05-10T15:26:43.365917",
+    "temperature": 34.4,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 90,
+    "waterValve": true
+  },
+  {
+    "timestamp": "2026-05-10T15:26:46.433201",
+    "temperature": 38.6,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 90,
+    "waterValve": true
+  },
+  {
+    "timestamp": "2026-05-10T15:26:49.090036",
+    "temperature": 34.4,
+    "soilMoisture": 4095,
+    "heaterStatus": true,
+    "servoAngle": 90,
+    "waterValve": true
+  },
+  {
+    "timestamp": "2026-05-10T15:26:52.027850",
+    "temperature": 34.9,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 90,
+    "waterValve": true
+  },
+  {
+    "timestamp": "2026-05-10T15:26:55.129333",
+    "temperature": 38.4,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 90,
+    "waterValve": true
+  },
+  {
+    "timestamp": "2026-05-10T15:26:58.404990",
+    "temperature": 34.5,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 90,
+    "waterValve": true
+  },
+  {
+    "timestamp": "2026-05-10T15:27:01.291579",
+    "temperature": 34.1,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:27:04.699188",
+    "temperature": 38.3,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 90,
+    "waterValve": true
+  },
+  {
+    "timestamp": "2026-05-10T15:27:07.215840",
+    "temperature": 37.8,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 90,
+    "waterValve": true
+  },
+  {
+    "timestamp": "2026-05-10T15:27:10.082384",
+    "temperature": 34.4,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 90,
+    "waterValve": true
+  },
+  {
+    "timestamp": "2026-05-10T15:27:13.358034",
+    "temperature": 34.6,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:27:16.634631",
+    "temperature": 37.1,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 90,
+    "waterValve": true
+  },
+  {
+    "timestamp": "2026-05-10T15:27:19.026091",
+    "temperature": 33.9,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:27:22.024012",
+    "temperature": 34.2,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 90,
+    "waterValve": true
+  },
+  {
+    "timestamp": "2026-05-10T15:27:25.057932",
+    "temperature": 38.6,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:27:28.651969",
+    "temperature": 34.5,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:27:31.482284",
+    "temperature": 35,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:27:34.587422",
+    "temperature": 37.8,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:27:37.321722",
+    "temperature": 38.1,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:27:40.084955",
+    "temperature": 34.2,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:27:43.778682",
+    "temperature": 34.2,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:27:46.336987",
+    "temperature": 33.2,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:27:49.133126",
+    "temperature": 34.8,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:27:52.094870",
+    "temperature": 34.3,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:27:55.140776",
+    "temperature": 38,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:27:58.016361",
+    "temperature": 33.9,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:28:00.999746",
+    "temperature": 34.3,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:28:04.785093",
+    "temperature": 34,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:28:07.150202",
+    "temperature": 38.1,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:28:10.450900",
+    "temperature": 34.1,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:28:13.014817",
+    "temperature": 33.9,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:28:16.230526",
+    "temperature": 38,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:28:19.203981",
+    "temperature": 31.2,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:28:22.169273",
+    "temperature": 34.2,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:28:25.616971",
+    "temperature": 39.2,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:28:28.109581",
+    "temperature": 38.1,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:28:31.342700",
+    "temperature": 33.8,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:28:34.253078",
+    "temperature": 34.4,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:28:37.749776",
+    "temperature": 37.9,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:28:40.089166",
+    "temperature": 33.9,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:28:43.528413",
+    "temperature": 34.1,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:28:46.026139",
+    "temperature": 38,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:28:49.770200",
+    "temperature": 32,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:28:52.077286",
+    "temperature": 33.9,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:28:55.798607",
+    "temperature": 38.3,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:28:58.410238",
+    "temperature": 37.9,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:29:01.537403",
+    "temperature": 33.9,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:29:04.084372",
+    "temperature": 34.1,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:29:07.788502",
+    "temperature": 37.9,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:29:10.032444",
+    "temperature": 34.4,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:29:13.410691",
+    "temperature": 34,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:29:16.213261",
+    "temperature": 37.8,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:29:19.969603",
+    "temperature": 34.3,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:29:21.995999",
+    "temperature": 34,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:29:25.424557",
+    "temperature": 37.9,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:29:28.465609",
+    "temperature": 38.7,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:29:31.084336",
+    "temperature": 34.2,
+    "soilMoisture": 3088,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:29:34.606904",
+    "temperature": 33.9,
+    "soilMoisture": 3111,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:29:37.026592",
+    "temperature": 37.8,
+    "soilMoisture": 3312,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:29:40.645697",
+    "temperature": 33.8,
+    "soilMoisture": 3105,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:29:42.983668",
+    "temperature": 34.1,
+    "soilMoisture": 1968,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:29:46.583467",
+    "temperature": 38.1,
+    "soilMoisture": 2017,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:29:49.256932",
+    "temperature": 37.7,
+    "soilMoisture": 1983,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:29:52.307888",
+    "temperature": 34.6,
+    "soilMoisture": 1904,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:29:55.456850",
+    "temperature": 34.2,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:29:58.222611",
+    "temperature": 37.8,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:30:01.346690",
+    "temperature": 33.7,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:30:04.009874",
+    "temperature": 34.3,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:30:07.465955",
+    "temperature": 38,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:30:10.013761",
+    "temperature": 33.9,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:30:13.113557",
+    "temperature": 34.1,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:30:16.076561",
+    "temperature": 39.5,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:30:19.923079",
+    "temperature": 37.8,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:30:22.326928",
+    "temperature": 33.9,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:30:25.791188",
+    "temperature": 35.2,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:30:28.027328",
+    "temperature": 37.3,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:30:31.091450",
+    "temperature": 33.9,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:30:34.911309",
+    "temperature": 34.9,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:30:37.340165",
+    "temperature": 37.8,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:30:40.028546",
+    "temperature": 34,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:30:43.004539",
+    "temperature": 34,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:30:46.142446",
+    "temperature": 38,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:30:49.969688",
+    "temperature": 37.9,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:30:52.080074",
+    "temperature": 34,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:30:55.724234",
+    "temperature": 33.9,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:30:58.223615",
+    "temperature": 38,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:31:01.017924",
+    "temperature": 35.9,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:31:04.619184",
+    "temperature": 29.6,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:31:07.576252",
+    "temperature": 35.7,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:31:10.017766",
+    "temperature": 31.4,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:31:12.989160",
+    "temperature": 31.3,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:31:16.155722",
+    "temperature": 35.6,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:31:19.685848",
+    "temperature": 35.5,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:31:22.314729",
+    "temperature": 31.7,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:31:25.155734",
+    "temperature": 31.8,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:31:28.126348",
+    "temperature": 34.5,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:31:31.093941",
+    "temperature": 31.5,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:31:34.277929",
+    "temperature": 31.5,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:31:37.495684",
+    "temperature": 35.7,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:31:40.702061",
+    "temperature": 35.8,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:31:43.074280",
+    "temperature": 31.6,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:31:46.153487",
+    "temperature": 31.5,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:31:48.998182",
+    "temperature": 35.8,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:31:52.028100",
+    "temperature": 31.7,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:31:55.483127",
+    "temperature": 36.1,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:31:58.229365",
+    "temperature": 36.5,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:32:01.095420",
+    "temperature": 31.4,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:32:04.066429",
+    "temperature": 31.7,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:32:07.137071",
+    "temperature": 35.7,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:32:10.105608",
+    "temperature": 35.1,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:32:13.091973",
+    "temperature": 31.4,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:32:16.794425",
+    "temperature": 30.9,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:32:19.039633",
+    "temperature": 35.5,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:32:22.088822",
+    "temperature": 31.7,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:32:25.055784",
+    "temperature": 31.4,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:32:28.062670",
+    "temperature": 35.6,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:32:31.106782",
+    "temperature": 31.8,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:32:34.477541",
+    "temperature": 31.5,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:32:37.245877",
+    "temperature": 35.6,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:32:40.006067",
+    "temperature": 35.4,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:32:43.081131",
+    "temperature": 31.5,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:32:46.003507",
+    "temperature": 31.9,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:32:49.035412",
+    "temperature": 36,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:32:52.465600",
+    "temperature": 31.4,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:32:55.382022",
+    "temperature": 31.7,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:33:01.365471",
+    "temperature": 35.8,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:33:01.923068",
+    "temperature": 31.4,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:33:04.532731",
+    "temperature": 31.3,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:33:07.708874",
+    "temperature": 35.6,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:33:10.552224",
+    "temperature": 31.7,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:33:14.201430",
+    "temperature": 31.7,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:33:17.238623",
+    "temperature": 36,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:33:19.572975",
+    "temperature": 36,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:33:22.607772",
+    "temperature": 31.4,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:33:25.778837",
+    "temperature": 32.7,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:33:28.649418",
+    "temperature": 35.6,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:33:32.198817",
+    "temperature": 31.9,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:33:35.040584",
+    "temperature": 32.5,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:33:38.007731",
+    "temperature": 36,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:33:41.294730",
+    "temperature": 32.1,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:33:43.603861",
+    "temperature": 32.1,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:33:46.771297",
+    "temperature": 35.5,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:33:49.536132",
+    "temperature": 35.8,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:33:52.646393",
+    "temperature": 31.9,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:33:55.550193",
+    "temperature": 31.3,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:33:59.230316",
+    "temperature": 35.7,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:34:01.557304",
+    "temperature": 31.4,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:34:04.690482",
+    "temperature": 31.5,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:34:07.562415",
+    "temperature": 35.3,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:34:10.546123",
+    "temperature": 31.3,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:34:13.651139",
+    "temperature": 31.3,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:34:16.773311",
+    "temperature": 31.8,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:34:19.574129",
+    "temperature": 35.6,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:34:23.176555",
+    "temperature": 31.3,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:34:26.283175",
+    "temperature": 31.2,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:34:28.886590",
+    "temperature": 35.8,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:34:31.725780",
+    "temperature": 31.2,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:34:34.526165",
+    "temperature": 31.5,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:34:37.607186",
+    "temperature": 38.6,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:34:40.532292",
+    "temperature": 35.5,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:34:43.601599",
+    "temperature": 31.4,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:34:46.778966",
+    "temperature": 31.8,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:34:50.051933",
+    "temperature": 36,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:34:52.612572",
+    "temperature": 31.9,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:34:55.581098",
+    "temperature": 31.7,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:34:58.529446",
+    "temperature": 35.8,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:35:01.631278",
+    "temperature": 31.7,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:35:04.593488",
+    "temperature": 31.7,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:35:07.650590",
+    "temperature": 35.9,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:35:10.539342",
+    "temperature": 35.5,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:35:14.144410",
+    "temperature": 32,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:35:16.704394",
+    "temperature": 31.4,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:35:20.064863",
+    "temperature": 35.3,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:35:22.620520",
+    "temperature": 31.7,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:35:25.524477",
+    "temperature": 31.4,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:35:28.703665",
+    "temperature": 35.8,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:35:31.531437",
+    "temperature": 31.9,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:35:34.626593",
+    "temperature": 32.3,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:35:38.121328",
+    "temperature": 31.8,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:35:41.206215",
+    "temperature": 35.6,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:35:43.531856",
+    "temperature": 31.3,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:35:46.534659",
+    "temperature": 31.9,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:35:49.549787",
+    "temperature": 35.8,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:35:52.515455",
+    "temperature": 31.9,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:35:55.559340",
+    "temperature": 31.9,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:35:58.519086",
+    "temperature": 35.7,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:36:01.628487",
+    "temperature": 33.9,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:36:04.993237",
+    "temperature": 32.1,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:36:07.572425",
+    "temperature": 31.3,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:36:10.947177",
+    "temperature": 35.7,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:36:13.610919",
+    "temperature": 33.2,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:36:16.596077",
+    "temperature": 32.1,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:36:19.655590",
+    "temperature": 35.6,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:36:22.621475",
+    "temperature": 32.1,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:36:25.690618",
+    "temperature": 32.2,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:36:28.541341",
+    "temperature": 35.7,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:36:31.564464",
+    "temperature": 35.6,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:36:35.625080",
+    "temperature": 31.8,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:36:37.676737",
+    "temperature": 31.8,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:36:40.556572",
+    "temperature": 35.5,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:36:43.655315",
+    "temperature": 32.1,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:36:46.619781",
+    "temperature": 32,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:36:49.555956",
+    "temperature": 36.1,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:36:52.566665",
+    "temperature": 34.8,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:36:55.599705",
+    "temperature": 27.9,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:36:58.580201",
+    "temperature": 35.7,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:37:01.508183",
+    "temperature": 35.6,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:37:05.129808",
+    "temperature": 32.5,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:37:07.595171",
+    "temperature": 31.7,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:37:10.747662",
+    "temperature": 35.7,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:37:13.717350",
+    "temperature": 31.7,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:37:16.507145",
+    "temperature": 31.9,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:37:19.609447",
+    "temperature": 36,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:37:22.831564",
+    "temperature": 31.9,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:37:25.543966",
+    "temperature": 31.9,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:37:28.676095",
+    "temperature": 31.3,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:37:31.638388",
+    "temperature": 35.8,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:37:35.245729",
+    "temperature": 31.9,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:37:37.511579",
+    "temperature": 31.4,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:37:40.544327",
+    "temperature": 35.7,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:37:43.563824",
+    "temperature": 31.5,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:37:46.587501",
+    "temperature": 31.8,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:37:49.567338",
+    "temperature": 36.4,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:37:52.509126",
+    "temperature": 35.8,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:37:55.714447",
+    "temperature": 32,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:37:58.591623",
+    "temperature": 31.9,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:38:01.741574",
+    "temperature": 35.4,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:38:05.502315",
+    "temperature": 32.1,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:38:07.578234",
+    "temperature": 31.7,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:38:10.579948",
+    "temperature": 35.5,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:38:13.726600",
+    "temperature": 32.3,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:38:16.606958",
+    "temperature": 32.2,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:38:19.764323",
+    "temperature": 35.6,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:38:22.630712",
+    "temperature": 35.5,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:38:25.504348",
+    "temperature": 31.8,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:38:28.615352",
+    "temperature": 29.7,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:38:31.576952",
+    "temperature": 35.7,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:38:35.031285",
+    "temperature": 29.5,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:38:37.584410",
+    "temperature": 31.8,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:38:40.653196",
+    "temperature": 35.6,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:38:43.673172",
+    "temperature": 32.2,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:38:46.513244",
+    "temperature": 31.8,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:38:49.591732",
+    "temperature": 31.9,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:38:52.735938",
+    "temperature": 35.7,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:38:55.522786",
+    "temperature": 35.5,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:38:58.509441",
+    "temperature": 31.4,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:39:01.546652",
+    "temperature": 35.8,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:39:05.475486",
+    "temperature": 31.3,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:39:07.581001",
+    "temperature": 33.2,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:39:10.658159",
+    "temperature": 35.7,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:39:13.624889",
+    "temperature": 31.5,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:39:16.596418",
+    "temperature": 31.7,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:39:19.664732",
+    "temperature": 31.9,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:39:22.632976",
+    "temperature": 35.7,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:39:25.607224",
+    "temperature": 31.7,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:39:28.577532",
+    "temperature": 28.2,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:39:31.553255",
+    "temperature": 35.6,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:39:34.517549",
+    "temperature": 31.4,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:39:38.444972",
+    "temperature": 32,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:39:40.999574",
+    "temperature": 36,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:39:43.888890",
+    "temperature": 36.4,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:39:46.699390",
+    "temperature": 35.7,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:39:49.521969",
+    "temperature": 31.5,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:39:52.527182",
+    "temperature": 35.7,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:39:55.609668",
+    "temperature": 31.9,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:39:58.543050",
+    "temperature": 36.6,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:40:01.753945",
+    "temperature": 35.5,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:40:04.620832",
+    "temperature": 31.3,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:40:07.588314",
+    "temperature": 31.7,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:40:10.661223",
+    "temperature": 36,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:40:14.207292",
+    "temperature": 35.3,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:40:17.333940",
+    "temperature": 31.7,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:40:19.776135",
+    "temperature": 32,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:40:22.743520",
+    "temperature": 35.4,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:40:25.523391",
+    "temperature": 29.9,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:40:28.515024",
+    "temperature": 31.4,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:40:31.534155",
+    "temperature": 35.3,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:40:34.635810",
+    "temperature": 31.8,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:40:37.592373",
+    "temperature": 31.8,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:40:40.800153",
+    "temperature": 35.6,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:40:43.537458",
+    "temperature": 35.6,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:40:47.617280",
+    "temperature": 31.7,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:40:50.016256",
+    "temperature": 31.8,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:40:53.191788",
+    "temperature": 35.5,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:40:56.265616",
+    "temperature": 31.5,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:40:58.686356",
+    "temperature": 31.3,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:41:01.654631",
+    "temperature": 35.5,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:41:04.625032",
+    "temperature": 31.7,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:41:07.621853",
+    "temperature": 31.8,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:41:10.569109",
+    "temperature": 31.6,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:41:13.635457",
+    "temperature": 35.6,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:41:16.607211",
+    "temperature": 31.7,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:41:19.574378",
+    "temperature": 31.5,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:41:22.587280",
+    "temperature": 35.8,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:41:26.454649",
+    "temperature": 32.5,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:41:28.584193",
+    "temperature": 31.5,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:41:31.760011",
+    "temperature": 35.6,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:41:34.523892",
+    "temperature": 35.3,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:41:37.596598",
+    "temperature": 31.5,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:41:40.536695",
+    "temperature": 32.3,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:41:43.559838",
+    "temperature": 35.7,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:41:46.711365",
+    "temperature": 31.9,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:41:49.576986",
+    "temperature": 35,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:41:52.648132",
+    "temperature": 35.7,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:41:55.652023",
+    "temperature": 31.6,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:41:59.135504",
+    "temperature": 31.4,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:42:01.865701",
+    "temperature": 35.6,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:42:05.188579",
+    "temperature": 35.6,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:42:07.599426",
+    "temperature": 31.5,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:42:10.553586",
+    "temperature": 31.6,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:42:13.584778",
+    "temperature": 35.8,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:42:16.564803",
+    "temperature": 31.8,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:42:19.511025",
+    "temperature": 32.1,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:42:22.757643",
+    "temperature": 35.8,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:42:25.535546",
+    "temperature": 32.6,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:42:28.590595",
+    "temperature": 31.6,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:42:31.599464",
+    "temperature": 31.4,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:42:35.380811",
+    "temperature": 35.5,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:42:37.932340",
+    "temperature": 31.8,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:42:40.572765",
+    "temperature": 31.7,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:42:43.543018",
+    "temperature": 35.7,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:42:46.653246",
+    "temperature": 32,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:42:49.540297",
+    "temperature": 32.7,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:42:52.757565",
+    "temperature": 35.5,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:42:55.627584",
+    "temperature": 35.7,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:42:58.597732",
+    "temperature": 31.9,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:43:01.666785",
+    "temperature": 31.9,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:43:04.542000",
+    "temperature": 35.2,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:43:07.624997",
+    "temperature": 31.7,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:43:10.520517",
+    "temperature": 31.9,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:43:14.535327",
+    "temperature": 35.7,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:43:16.614857",
+    "temperature": 31.9,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:43:20.122595",
+    "temperature": 31.3,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:43:22.560093",
+    "temperature": 35.5,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:43:25.831253",
+    "temperature": 35.5,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:43:28.600819",
+    "temperature": 31.7,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:43:31.524330",
+    "temperature": 31.2,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:43:34.688513",
+    "temperature": 35.5,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:43:37.602923",
+    "temperature": 31.7,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:43:40.609655",
+    "temperature": 31.9,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:43:43.570271",
+    "temperature": 34.9,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:43:46.555627",
+    "temperature": 31.8,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:43:49.591173",
+    "temperature": 31.9,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:43:53.606903",
+    "temperature": 35.4,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:43:56.448789",
+    "temperature": 36.1,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:43:58.556444",
+    "temperature": 31.5,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:44:01.586389",
+    "temperature": 31.9,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:44:04.793327",
+    "temperature": 35.5,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:44:07.611348",
+    "temperature": 31.7,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:44:10.579925",
+    "temperature": 31.7,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:44:13.533530",
+    "temperature": 35.7,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:44:16.621317",
+    "temperature": 31.3,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:44:19.589928",
+    "temperature": 32.2,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:44:22.804021",
+    "temperature": 35.8,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:44:25.635785",
+    "temperature": 35.5,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:44:28.647200",
+    "temperature": 31.9,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:44:32.698523",
+    "temperature": 31.8,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:44:35.418179",
+    "temperature": 35.7,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:44:39.135245",
+    "temperature": 31.8,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:44:41.315316",
+    "temperature": 32,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:44:43.562616",
+    "temperature": 35.6,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:44:46.663226",
+    "temperature": 39.4,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:44:49.543582",
+    "temperature": 31.5,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:44:52.583920",
+    "temperature": 31.7,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:44:55.638490",
+    "temperature": 35.7,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:44:58.603367",
+    "temperature": 27.6,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:45:01.522060",
+    "temperature": 31.7,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:45:04.644646",
+    "temperature": 35.7,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:45:07.615838",
+    "temperature": 31.7,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:45:10.588808",
+    "temperature": 30.9,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:45:14.638979",
+    "temperature": 31.7,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:45:16.863300",
+    "temperature": 35.7,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:45:19.697614",
+    "temperature": 32,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:45:22.668172",
+    "temperature": 28.7,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:45:25.742901",
+    "temperature": 35.6,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:45:28.620344",
+    "temperature": 31.6,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:45:31.575728",
+    "temperature": 31.3,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:45:34.789836",
+    "temperature": 35.7,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:45:37.618414",
+    "temperature": 31.8,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:45:40.631471",
+    "temperature": 31.8,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:45:44.101184",
+    "temperature": 37.8,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:45:46.632822",
+    "temperature": 35.2,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:45:49.598670",
+    "temperature": 31.3,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:45:53.545266",
+    "temperature": 32.3,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:45:56.344681",
+    "temperature": 35.3,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:45:59.169509",
+    "temperature": 33.9,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:46:01.785231",
+    "temperature": 31.5,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:46:04.515885",
+    "temperature": 35.7,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:46:07.619391",
+    "temperature": 31.7,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:46:10.691965",
+    "temperature": 32,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:46:13.663415",
+    "temperature": 31.9,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:46:16.583107",
+    "temperature": 35.4,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:46:19.557307",
+    "temperature": 31.3,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:46:22.586674",
+    "temperature": 31.5,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:46:25.562029",
+    "temperature": 35.8,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:46:28.542298",
+    "temperature": 31.8,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:46:31.497564",
+    "temperature": 31.5,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:46:35.085231",
+    "temperature": 36.1,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:59:11.414265",
+    "temperature": 31,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:59:11.527862",
+    "temperature": 31.3,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:59:11.872311",
+    "temperature": 31.6,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:59:12.267871",
+    "temperature": 36,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:59:12.525308",
+    "temperature": 37.8,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:59:12.610464",
+    "temperature": 36.3,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:59:12.736549",
+    "temperature": 35.3,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:59:12.833970",
+    "temperature": 35.6,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+  {
+    "timestamp": "2026-05-10T15:59:12.982695",
+    "temperature": 36.6,
+    "soilMoisture": 4095,
+    "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  },
+                                                                                                              "heaterStatus": false,
+    "servoAngle": 0,
+    "waterValve": false
+  }
+]
