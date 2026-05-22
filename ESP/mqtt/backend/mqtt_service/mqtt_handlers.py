@@ -1,4 +1,5 @@
 from datetime import datetime, timezone
+from zoneinfo import ZoneInfo
 
 from django.conf import settings
 
@@ -6,7 +7,7 @@ from config.mongo import get_db
 
 
 def _now() -> datetime:
-    return datetime.now(timezone.utc)
+    return datetime.now(ZoneInfo("Asia/Ho_Chi_Minh"))
 
 
 def _extract_device_id(topic: str) -> str:
@@ -36,7 +37,6 @@ def handle_status(topic: str, payload: dict) -> None:
         "online": bool(payload.get("online", True)),
         "pump": bool(payload.get("pump", False)),
         "light": bool(payload.get("light", False)),
-        "heater": bool(payload.get("heater", False)),
         "timestamp": _now(),
     }
     db.device_status.update_one({"deviceId": device_id}, {"$set": status}, upsert=True)
@@ -50,6 +50,7 @@ def handle_telemetry(topic: str, payload: dict) -> None:
         "deviceId": device_id,
         "temperature": float(payload.get("temperature", 0)),
         "soilMoisture": int(payload.get("soilMoisture", 0)),
+        "lightIntensity": float(payload.get("lightIntensity", 0)),
         "timestamp": _now(),
     }
     db.telemetry.insert_one(telemetry)
@@ -84,21 +85,18 @@ def process_automation_rule(device_id: str, telemetry: dict) -> None:
     else:
         command["pump"] = False
 
-    if temp < settings.AUTOMATION_TEMP_THRESHOLD:
-        command["heater"] = True
-    else:
-        command["heater"] = False
-
-    # Keep light as current state if available; otherwise default off.
+    # Light also provides heating — force ON when temperature is low.
     status = db.device_status.find_one({"deviceId": device_id}) or {}
-    command["light"] = bool(status.get("light", False))
+    if temp < settings.AUTOMATION_TEMP_THRESHOLD:
+        command["light"] = True
+    else:
+        command["light"] = bool(status.get("light", False))
 
     publish_device_command(device_id, command)
     db.commands.insert_one(
         {
             "deviceId": device_id,
             "pump": command["pump"],
-            "heater": command["heater"],
             "light": command["light"],
             "source": "automation",
             "timestamp": _now(),

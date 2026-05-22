@@ -3,110 +3,247 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Plant MQTT Dashboard</title>
+  <meta name="description" content="Indoor Plant Support System — Smart monitoring and care for your indoor garden">
+  <title>Indoor Plant Support System</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <link rel="stylesheet" href="/static/dashboard/style.css">
 </head>
 <body>
-  <main class="layout">
-    <section class="hero">
-      <div class="hero-left">
-        <p class="eyebrow">Plant Ops Console</p>
-        <h1>Smart Plant Monitor</h1>
-        <p class="subtitle">MQTT + Django + MongoDB realtime control</p>
-      </div>
-      <div class="hero-right">
-        <p>Device</p>
-        <h2 id="deviceLabel">esp32-001</h2>
-        <span class="badge" id="liveBadge">Live</span>
-      </div>
-    </section>
 
-    <section class="cards" id="overviewCards">
-      <article class="card metric">
-        <h2>Temperature</h2>
-        <p id="tempVal">--</p>
-        <small>Optimal 18-30 C</small>
-      </article>
-      <article class="card metric">
-        <h2>Soil Moisture</h2>
-        <p id="soilVal">--</p>
-        <small>Optimal 50-80 %</small>
-      </article>
-      <article class="card state">
-        <h2>Pump</h2>
-        <p id="pumpVal">--</p>
-      </article>
-      <article class="card state">
-        <h2>Light</h2>
-        <p id="lightVal">--</p>
-      </article>
-      <article class="card state">
-        <h2>Heater</h2>
-        <p id="heaterVal">--</p>
-      </article>
-    </section>
+  <!-- Soft ambient background -->
+  <div class="bg-ambient"></div>
+  <div class="leaf-deco">🌿</div>
+  <div class="leaf-deco">🍃</div>
+  <div class="leaf-deco">☘️</div>
 
-    <section class="grid-2">
-      <section class="panel gauges">
-        <h2>Live Gauges</h2>
-        <div class="gauge-wrap">
-          <div class="gauge-item">
-            <div class="gauge-head">
-              <span>Temperature</span>
-              <span id="tempGaugeText">-- C</span>
-            </div>
-            <div class="gauge-track"><div id="tempGaugeBar"></div></div>
+  <!-- Header -->
+  <header class="app-header">
+    <div class="brand">
+      <span class="brand-icon">🌿</span>
+      <div>
+        <h1>Indoor Plant Support System</h1>
+        <p>Smart care for your green friends</p>
+      </div>
+    </div>
+    <div class="header-right">
+      <span class="device-tag" id="deviceLabel">esp32-001</span>
+      <span class="live-dot" id="liveBadge">Live</span>
+    </div>
+  </header>
+
+  <!-- Dashboard -->
+  <main class="dashboard">
+
+    <!-- ═══ LEFT ═══ -->
+    <div class="main-content">
+
+      <!-- Hero — compact -->
+      <section class="plant-hero" id="plantHero">
+        <div>
+          <h2>My Indoor Garden</h2>
+          <p class="hero-sub">Realtime monitoring & automated care</p>
+          <div class="hero-badge good" id="overallHealth">✔ All systems healthy</div>
+        </div>
+      </section>
+
+      <!-- Sensor Cards -->
+      <section class="sensor-grid" id="sensorGrid">
+
+        <div class="sensor-card" id="tempCard">
+          <div class="sensor-top">
+            <span class="sensor-icon">🌡️</span>
+            <span class="status-tag optimal" id="tempStatus">Optimal ✔</span>
           </div>
-          <div class="gauge-item">
-            <div class="gauge-head">
-              <span>Soil Moisture</span>
-              <span id="soilGaugeText">-- %</span>
-            </div>
-            <div class="gauge-track"><div id="soilGaugeBar"></div></div>
+          <p class="sensor-name">Temperature</p>
+          <p class="sensor-value" id="tempVal">--</p>
+          <p class="sensor-hint">18 – 30 °C</p>
+          <div class="sensor-bar"><div class="sensor-fill temp" id="tempBar"></div></div>
+        </div>
+
+        <div class="sensor-card" id="moistCard">
+          <div class="water-drops">
+            <span class="water-drop">💧</span>
+            <span class="water-drop">💧</span>
+            <span class="water-drop">💧</span>
+          </div>
+          <div class="sensor-top">
+            <span class="sensor-icon">💧</span>
+            <span class="status-tag optimal" id="moistStatus">Optimal ✔</span>
+          </div>
+          <p class="sensor-name">Soil Moisture</p>
+          <p class="sensor-value" id="soilVal">--</p>
+          <p class="sensor-hint">50 – 80 %</p>
+          <div class="sensor-bar"><div class="sensor-fill moisture" id="moistBar"></div></div>
+        </div>
+
+        <div class="sensor-card" id="lightSensorCard">
+          <div class="sensor-top">
+            <span class="sensor-icon">☀️</span>
+            <span class="status-tag optimal" id="lightStatus">Optimal ✔</span>
+          </div>
+          <p class="sensor-name">Light Intensity</p>
+          <p class="sensor-value" id="lightIntVal">--</p>
+          <p class="sensor-hint">500 – 1500 lux</p>
+          <div class="sensor-bar"><div class="sensor-fill light" id="lightBar"></div></div>
+        </div>
+
+        <div class="sensor-card" id="lightStatusCard">
+          <div class="sensor-top">
+            <span class="sensor-icon">💡</span>
+            <span class="status-tag optimal" id="lightActStatus">OFF</span>
+          </div>
+          <p class="sensor-name">Grow Light</p>
+          <p class="sensor-value" id="lightActVal">OFF</p>
+          <p class="sensor-hint">Actuator state</p>
+          <div class="sensor-bar"><div class="sensor-fill light-act" id="lightActBar"></div></div>
+        </div>
+
+        <div class="sensor-card" id="pumpCard">
+          <div class="sensor-top">
+            <span class="sensor-icon">🚰</span>
+            <span class="status-tag optimal" id="pumpStatus">Idle</span>
+          </div>
+          <p class="sensor-name">Water Pump</p>
+          <p class="sensor-value" id="pumpVal">OFF</p>
+          <p class="sensor-hint">Auto / Manual</p>
+          <div class="sensor-bar"><div class="sensor-fill pump" id="pumpBar"></div></div>
+        </div>
+
+      </section>
+
+      <!-- Charts — 3 columns -->
+      <section class="charts-section">
+        <div class="charts-header">
+          <p class="section-label" style="margin-bottom:0">Sensor History</p>
+          <div class="period-btns" id="periodButtons">
+            <button data-period="hour" id="btn-hour">1H</button>
+            <button data-period="day" class="active" id="btn-day">24H</button>
+            <button data-period="week" id="btn-week">7D</button>
+          </div>
+        </div>
+        <div class="chart-row">
+          <div class="chart-card">
+            <h3>Temperature</h3>
+            <div class="chart-wrap"><canvas id="tempChart"></canvas></div>
+          </div>
+          <div class="chart-card">
+            <h3>Soil Moisture</h3>
+            <div class="chart-wrap"><canvas id="soilChart"></canvas></div>
+          </div>
+          <div class="chart-card">
+            <h3>Light Intensity</h3>
+            <div class="chart-wrap"><canvas id="luxChart"></canvas></div>
           </div>
         </div>
       </section>
 
-      <section class="panel controls">
-        <h2>Manual Command</h2>
-        <form id="commandForm">
-          <label><input type="checkbox" name="pump"> Pump ON</label>
-          <label><input type="checkbox" name="light"> Light ON</label>
-          <label><input type="checkbox" name="heater"> Heater ON</label>
-          <button type="submit">Send Command</button>
+      <!-- System Config -->
+      <section class="config-card" id="configSection">
+        <p class="section-label">⚙ System Thresholds</p>
+        <form id="configForm">
+          <div class="cfg-columns">
+            <div class="cfg-col">
+              <span class="cfg-col-title">🌡️ Temperature (°C)</span>
+              <div class="cfg-pair">
+                <div class="cfg-group">
+                  <label>Min</label>
+                  <input type="number" id="cfg-temp-min" value="18" step="0.5">
+                </div>
+                <div class="cfg-group">
+                  <label>Max</label>
+                  <input type="number" id="cfg-temp-max" value="30" step="0.5">
+                </div>
+              </div>
+            </div>
+            <div class="cfg-col">
+              <span class="cfg-col-title">💧 Soil Moisture (%)</span>
+              <div class="cfg-pair">
+                <div class="cfg-group">
+                  <label>Min</label>
+                  <input type="number" id="cfg-moist-min" value="30" step="1">
+                </div>
+                <div class="cfg-group">
+                  <label>Max</label>
+                  <input type="number" id="cfg-moist-max" value="80" step="1">
+                </div>
+              </div>
+            </div>
+            <div class="cfg-col">
+              <span class="cfg-col-title">☀️ Light Intensity (lux)</span>
+              <div class="cfg-pair">
+                <div class="cfg-group">
+                  <label>Min</label>
+                  <input type="number" id="cfg-lux-min" value="500" step="50">
+                </div>
+                <div class="cfg-group">
+                  <label>Max</label>
+                  <input type="number" id="cfg-lux-max" value="1500" step="50">
+                </div>
+              </div>
+            </div>
+          </div>
+          <button type="button" class="btn-apply" id="btn-save-config">Save Thresholds</button>
         </form>
       </section>
-    </section>
 
-    <section class="panel">
-      <div class="panel-head">
-        <h2>History</h2>
-        <div class="periods">
-          <button data-period="hour">Last hour</button>
-          <button data-period="day" class="active">Last day</button>
-          <button data-period="week">Last week</button>
+    </div>
+
+    <!-- ═══ RIGHT ═══ -->
+    <aside class="side-panel">
+
+      <!-- Device Status + Controls -->
+      <div class="side-card" id="deviceCard">
+        <h3>Device</h3>
+        <div class="device-row">
+          <span>ID</span>
+          <strong id="deviceIdDisplay">esp32-001</strong>
+        </div>
+        <div class="device-row">
+          <span>Status</span>
+          <strong id="connectionStatus" style="color: var(--green);">Connected</strong>
+        </div>
+        <div class="actuator-list">
+          <div class="actuator-item">
+            <span>💧 Pump</span>
+            <div class="act-btns">
+              <button type="button" class="act-btn on"  id="btn-pump-on">ON</button>
+              <button type="button" class="act-btn off" id="btn-pump-off">OFF</button>
+            </div>
+          </div>
+          <div class="actuator-item">
+            <span>💡 Light</span>
+            <div class="act-btns">
+              <button type="button" class="act-btn on"  id="btn-light-on">ON</button>
+              <button type="button" class="act-btn off" id="btn-light-off">OFF</button>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="chart-grid">
-        <div class="chart-card">
-          <h3>Temperature Trend</h3>
-          <canvas id="tempChart"></canvas>
-        </div>
-        <div class="chart-card">
-          <h3>Soil Trend</h3>
-          <canvas id="soilChart"></canvas>
+
+      <!-- AI Plant Assistant -->
+      <div class="side-card ai-card" id="aiPanel">
+        <h3>🌱 Plant Assistant</h3>
+        <div class="ai-feed" id="aiFeed">
+          <div class="ai-item">
+            <div class="ai-dot info"></div>
+            <div>
+              <p>Waiting for sensor data...</p>
+              <small>Just now</small>
+            </div>
+          </div>
         </div>
       </div>
-    </section>
 
-    <section class="panel">
-      <h2>Activity Timeline</h2>
-      <ul id="timeline"></ul>
-    </section>
+      <!-- Activity Log — moved here from left -->
+      <div class="side-card timeline-side" id="timelineCard">
+        <h3>Activity</h3>
+        <ul id="timeline"></ul>
+      </div>
+
+    </aside>
   </main>
 
   <script src="/static/dashboard/app.js"></script>

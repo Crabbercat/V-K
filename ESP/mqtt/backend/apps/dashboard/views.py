@@ -1,5 +1,7 @@
 import json
+import logging
 from datetime import datetime, timedelta, timezone
+from zoneinfo import ZoneInfo
 
 from django.http import HttpRequest, HttpResponseBadRequest, JsonResponse
 from django.shortcuts import render
@@ -9,13 +11,15 @@ from pymongo import DESCENDING
 from config.mongo import get_db
 from mqtt_service.mqtt_publishers import publish_device_command
 
+logger = logging.getLogger(__name__)
+
 
 def index(request: HttpRequest):
     return render(request, "dashboard/index.html")
 
 
 def _period_start(period: str) -> datetime:
-    now = datetime.now(timezone.utc)
+    now = datetime.now(ZoneInfo("Asia/Ho_Chi_Minh"))
     if period == "hour":
         return now - timedelta(hours=1)
     if period == "week":
@@ -29,15 +33,21 @@ def api_overview(request: HttpRequest):
 
     latest = db.telemetry.find_one({"deviceId": device_id}, sort=[("timestamp", DESCENDING)]) or {}
     status = db.device_status.find_one({"deviceId": device_id}) or {}
+    # Normalize timestamp to Asia/Ho_Chi_Minh and return ISO string
+    ts = latest.get("timestamp") or status.get("timestamp")
+    if ts is not None:
+        if ts.tzinfo is None:
+            ts = ts.replace(tzinfo=timezone.utc)
+        ts = ts.astimezone(ZoneInfo("Asia/Ho_Chi_Minh")).isoformat()
 
     payload = {
         "deviceId": device_id,
         "temperature": latest.get("temperature"),
         "soilMoisture": latest.get("soilMoisture"),
+        "lightIntensity": latest.get("lightIntensity"),
         "pump": status.get("pump", False),
         "light": status.get("light", False),
-        "heater": status.get("heater", False),
-        "timestamp": latest.get("timestamp") or status.get("timestamp"),
+        "timestamp": ts,
     }
     return JsonResponse(payload)
 
@@ -54,14 +64,20 @@ def api_history(request: HttpRequest):
         .limit(5000)
     )
 
-    rows = [
-        {
-            "timestamp": item["timestamp"].isoformat(),
+    rows = []
+    for item in cursor:
+        ts = item["timestamp"]
+        if ts is not None:
+            if ts.tzinfo is None:
+                ts = ts.replace(tzinfo=timezone.utc)
+            ts = ts.astimezone(ZoneInfo("Asia/Ho_Chi_Minh")).isoformat()
+
+        rows.append({
+            "timestamp": ts,
             "temperature": item.get("temperature"),
             "soilMoisture": item.get("soilMoisture"),
-        }
-        for item in cursor
-    ]
+            "lightIntensity": item.get("lightIntensity"),
+        })
     return JsonResponse({"deviceId": device_id, "period": period, "items": rows})
 
 
@@ -69,21 +85,21 @@ def api_events(request: HttpRequest):
     db = get_db()
     device_id = request.GET.get("deviceId", "esp32-001")
 
-    rows = list(
-        db.commands.find({"deviceId": device_id})
-        .sort("timestamp", DESCENDING)
-        .limit(20)
-    )
-    payload = [
-        {
-            "timestamp": item["timestamp"].isoformat(),
+    rows = list(db.commands.find({"deviceId": device_id}).sort("timestamp", DESCENDING).limit(20))
+    payload = []
+    for item in rows:
+        ts = item.get("timestamp")
+        if ts is not None:
+            if ts.tzinfo is None:
+                ts = ts.replace(tzinfo=timezone.utc)
+            ts = ts.astimezone(ZoneInfo("Asia/Ho_Chi_Minh")).isoformat()
+
+        payload.append({
+            "timestamp": ts,
             "pump": item.get("pump", False),
             "light": item.get("light", False),
-            "heater": item.get("heater", False),
             "source": item.get("source", "unknown"),
-        }
-        for item in rows
-    ]
+        })
     return JsonResponse({"deviceId": device_id, "items": payload})
 
 
@@ -98,22 +114,52 @@ def api_command(request: HttpRequest):
         return HttpResponseBadRequest("Invalid JSON")
 
     device_id = body.get("deviceId", "esp32-001")
-    command = {
-        "pump": bool(body.get("pump", False)),
-        "light": bool(body.get("light", False)),
-        "heater": bool(body.get("heater", False)),
-    }
 
-    publish_device_command(device_id, command)
+    # Build command from only the fields the client sent.
+    command = {}
+    if "pump" in body:
+        command["pump"] = bool(body["pump"])
+    if "light" in body:
+        command["light"] = bool(body["light"])
+
+    if not command:
+        return HttpResponseBadRequest("No actuator field provided")
 
     db = get_db()
+    now = datetime.now(ZoneInfo("Asia/Ho_Chi_Minh"))
+
+    # ── 1. Update only the provided fields in device_status.
+    db.device_status.update_one(
+        {"deviceId": device_id},
+        {
+            "$set": {
+                "deviceId": device_id,
+                **command,
+                "timestamp": now,
+            }
+        },
+        upsert=True,
+    )
+
+    # ── 2. Record in command history.
     db.commands.insert_one(
         {
             "deviceId": device_id,
             **command,
             "source": "dashboard",
-            "timestamp": datetime.now(timezone.utc),
+            "timestamp": now,
         }
     )
+
+    # ── 3. Publish full actuator state to MQTT so the device knows both.
+    status = db.device_status.find_one({"deviceId": device_id}) or {}
+    mqtt_payload = {
+        "pump": status.get("pump", False),
+        "light": status.get("light", False),
+    }
+    try:
+        publish_device_command(device_id, mqtt_payload)
+    except Exception:
+        logger.exception("MQTT publish failed for %s", device_id)
 
     return JsonResponse({"status": "queued", "deviceId": device_id, "command": command})

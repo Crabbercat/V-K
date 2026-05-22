@@ -3,12 +3,13 @@ import json
 import random
 import time
 from datetime import datetime, timezone
+from zoneinfo import ZoneInfo
 
 import paho.mqtt.client as mqtt
 
 
 def now_iso() -> str:
-    return datetime.now(timezone.utc).isoformat()
+    return datetime.now(ZoneInfo("Asia/Ho_Chi_Minh")).isoformat()
 
 
 def clamp(value: float, low: float, high: float) -> float:
@@ -37,8 +38,8 @@ def main() -> None:
 
     temp = 27.0
     soil = 62.0
+    lux = 800.0
     pump = False
-    heater = False
     light = True
     tick = 0
 
@@ -56,7 +57,8 @@ def main() -> None:
             # - If too dry, pump turns on and soil rises quickly.
             # - If too cold, heater turns on.
             pump = soil < 30
-            heater = temp < 18
+            if temp < 18:
+                light = True
 
             if pump:
                 soil = clamp(soil + random.uniform(3.0, 5.0), 0.0, 100.0)
@@ -67,10 +69,20 @@ def main() -> None:
             if tick % 20 == 0:
                 light = not light
 
+            # Light intensity depends on grow light state.
+            if light:
+                lux = clamp(lux + random.uniform(-30, 30), 600.0, 1200.0)
+            else:
+                lux = clamp(lux + random.uniform(-10, 10), 50.0, 180.0)
+                # Quickly drop when light just turned off.
+                if lux > 200:
+                    lux = random.uniform(80.0, 160.0)
+
             telemetry_payload = {
                 "deviceId": device_id,
                 "temperature": round(temp, 2),
                 "soilMoisture": int(round(soil)),
+                "lightIntensity": round(lux, 1),
                 "timestamp": now_iso(),
             }
 
@@ -79,7 +91,6 @@ def main() -> None:
                 "online": True,
                 "pump": pump,
                 "light": light,
-                "heater": heater,
                 "timestamp": now_iso(),
             }
 
@@ -88,7 +99,8 @@ def main() -> None:
 
             print(
                 f"[{now_iso()}] temp={telemetry_payload['temperature']}C "
-                f"soil={telemetry_payload['soilMoisture']}% pump={pump} heater={heater} light={light}"
+                f"soil={telemetry_payload['soilMoisture']}% "
+                f"lux={telemetry_payload['lightIntensity']} pump={pump} light={light}"
             )
 
             tick += 1

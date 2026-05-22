@@ -2,7 +2,8 @@ from django.conf import settings
 from pymongo import ASCENDING, DESCENDING, MongoClient
 
 
-_client = MongoClient(settings.MONGODB_URI)
+# Create client with tz_aware so datetimes returned from MongoDB are timezone-aware (UTC)
+_client = MongoClient(settings.MONGODB_URI, tz_aware=True)
 _db = _client[settings.MONGODB_DB_NAME]
 
 
