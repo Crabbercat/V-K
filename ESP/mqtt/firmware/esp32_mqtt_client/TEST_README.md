@@ -9,6 +9,7 @@ Component-level test sketches for the MQTT hardware mapping. Upload one test at 
 - Heater relay: GPIO25
 - LM35 temperature: GPIO35
 - Soil moisture (YL-69): GPIO34
+- Light sensor (photoresistor / LDR): GPIO36
 
 ## Files
 
@@ -39,7 +40,13 @@ Component-level test sketches for the MQTT hardware mapping. Upload one test at 
 - Expected format: `raw | percent | zone`.
 - Adjust `SOIL_ADC_DRY` and `SOIL_ADC_WET` for your sensor calibration.
 
-6. Upload `offline_test.ino`
+6. Upload `light_sensor_test.ino` or the main MQTT firmware to verify the photoresistor input on GPIO36.
+
+7. Upload `esp32_mqtt_client.ino`
+- Pump relay automatically turns off after 2 seconds for both manual and automation commands.
+- Telemetry now includes `lightIntensity` from the photoresistor.
+
+8. Upload `offline_test.ino`
 - Open Serial Monitor at 115200 baud.
 - Use keyboard commands:
   - `p`: toggle pump
@@ -47,8 +54,3 @@ Component-level test sketches for the MQTT hardware mapping. Upload one test at 
   - `h`: toggle heater
   - `s`: print sensor values
   - `m`: print menu
-
-## Next step
-
-After all tests pass, upload main firmware:
-- `esp32_mqtt_client.ino`

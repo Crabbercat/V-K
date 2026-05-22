@@ -326,3 +326,5 @@ docker logs plant_mongodb --tail 50
 - **Frontend**: HTML, CSS, JavaScript, Chart.js
 - **Containerization**: Docker, Docker Compose
 - **Firmware**: Arduino (ESP32), PubSubClient, ArduinoJson
+
+Note: this script generates simulated telemetry, including `lightIntensity`. For real photoresistor data, flash `firmware/esp32_mqtt_client/esp32_mqtt_client.ino` on the ESP32 and stop the fake publisher.
