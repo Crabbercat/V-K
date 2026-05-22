@@ -1,0 +1,43 @@
+services:
+  django:
+    build: ./backend
+    container_name: plant_django
+    ports:
+      - "8000:8000"
+    environment:
+      DJANGO_DEBUG: "1"
+      DJANGO_ALLOWED_HOSTS: "*"
+      MONGODB_URI: "mongodb://mongodb:27017"
+      MONGODB_DB_NAME: "plant_monitor"
+      MQTT_HOST: "mosquitto"
+      MQTT_PORT: "1883"
+      AUTOMATION_SOIL_THRESHOLD: "30"
+      AUTOMATION_TEMP_THRESHOLD: "18"
+      DJANGO_RUN_MQTT: "1"
+    depends_on:
+      - mongodb
+      - mosquitto
+
+  mongodb:
+    image: mongo:7
+    container_name: plant_mongodb
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo_data:/data/db
+
+  mosquitto:
+    image: eclipse-mosquitto:2
+    container_name: plant_mosquitto
+    ports:
+      - "1883:1883"
+      - "9001:9001"
+    volumes:
+      - ./docker/mosquitto/mosquitto.conf:/mosquitto/config/mosquitto.conf
+      - mosquitto_data:/mosquitto/data
+      - mosquitto_log:/mosquitto/log
+
+volumes:
+  mongo_data:
+  mosquitto_data:
+  mosquitto_log:

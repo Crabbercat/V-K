@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Plant MQTT Dashboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link rel="stylesheet" href="/static/dashboard/style.css">
+</head>
+<body>
+  <main class="layout">
+    <section class="hero">
+      <div class="hero-left">
+        <p class="eyebrow">Plant Ops Console</p>
+        <h1>Smart Plant Monitor</h1>
+        <p class="subtitle">MQTT + Django + MongoDB realtime control</p>
+      </div>
+      <div class="hero-right">
+        <p>Device</p>
+        <h2 id="deviceLabel">esp32-001</h2>
+        <span class="badge" id="liveBadge">Live</span>
+      </div>
+    </section>
+
+    <section class="cards" id="overviewCards">
+      <article class="card metric">
+        <h2>Temperature</h2>
+        <p id="tempVal">--</p>
+        <small>Optimal 18-30 C</small>
+      </article>
+      <article class="card metric">
+        <h2>Soil Moisture</h2>
+        <p id="soilVal">--</p>
+        <small>Optimal 50-80 %</small>
+      </article>
+      <article class="card state">
+        <h2>Pump</h2>
+        <p id="pumpVal">--</p>
+      </article>
+      <article class="card state">
+        <h2>Light</h2>
+        <p id="lightVal">--</p>
+      </article>
+      <article class="card state">
+        <h2>Heater</h2>
+        <p id="heaterVal">--</p>
+      </article>
+    </section>
+
+    <section class="grid-2">
+      <section class="panel gauges">
+        <h2>Live Gauges</h2>
+        <div class="gauge-wrap">
+          <div class="gauge-item">
+            <div class="gauge-head">
+              <span>Temperature</span>
+              <span id="tempGaugeText">-- C</span>
+            </div>
+            <div class="gauge-track"><div id="tempGaugeBar"></div></div>
+          </div>
+          <div class="gauge-item">
+            <div class="gauge-head">
+              <span>Soil Moisture</span>
+              <span id="soilGaugeText">-- %</span>
+            </div>
+            <div class="gauge-track"><div id="soilGaugeBar"></div></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="panel controls">
+        <h2>Manual Command</h2>
+        <form id="commandForm">
+          <label><input type="checkbox" name="pump"> Pump ON</label>
+          <label><input type="checkbox" name="light"> Light ON</label>
+          <label><input type="checkbox" name="heater"> Heater ON</label>
+          <button type="submit">Send Command</button>
+        </form>
+      </section>
+    </section>
+
+    <section class="panel">
+      <div class="panel-head">
+        <h2>History</h2>
+        <div class="periods">
+          <button data-period="hour">Last hour</button>
+          <button data-period="day" class="active">Last day</button>
+          <button data-period="week">Last week</button>
+        </div>
+      </div>
+      <div class="chart-grid">
+        <div class="chart-card">
+          <h3>Temperature Trend</h3>
+          <canvas id="tempChart"></canvas>
+        </div>
+        <div class="chart-card">
+          <h3>Soil Trend</h3>
+          <canvas id="soilChart"></canvas>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>Activity Timeline</h2>
+      <ul id="timeline"></ul>
+    </section>
+  </main>
+
+  <script src="/static/dashboard/app.js"></script>
+</body>
+</html>

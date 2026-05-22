@@ -1,0 +1,276 @@
+:root {
+  --bg: #f1f4eb;
+  --panel: #fcfcf8;
+  --ink: #1b2f2b;
+  --accent: #007a63;
+  --accent-2: #d04b29;
+  --muted: #6a7f79;
+  --line: #d7e1dc;
+  --shadow: 0 10px 28px rgba(27, 47, 43, 0.14);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Space Grotesk", "Segoe UI", sans-serif;
+  color: var(--ink);
+  background:
+    radial-gradient(circle at 0% 0%, #fff6c8 0%, transparent 28%),
+    radial-gradient(circle at 100% 100%, #d7f0e6 0%, transparent 24%),
+    var(--bg);
+}
+
+.layout {
+  width: min(1150px, 92vw);
+  margin: 1.5rem auto 4rem;
+  display: grid;
+  gap: 1.1rem;
+}
+
+.hero {
+  background: linear-gradient(135deg, #fffef8, #eef8ef);
+  border-radius: 20px;
+  padding: 1.4rem;
+  box-shadow: var(--shadow);
+  border: 1px solid #e9eee8;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+h1, h2 {
+  margin: 0 0 0.6rem;
+}
+
+h1 {
+  font-size: clamp(1.5rem, 2.4vw, 2rem);
+}
+
+h3 {
+  margin: 0 0 0.8rem;
+}
+
+.eyebrow {
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+  font-size: 0.8rem;
+}
+
+.subtitle {
+  margin: 0;
+  color: var(--muted);
+}
+
+.hero-right {
+  text-align: right;
+}
+
+.hero-right p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.hero-right h2 {
+  margin: 0.2rem 0;
+}
+
+.badge {
+  display: inline-block;
+  padding: 0.25rem 0.65rem;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 0.8rem;
+  color: #fff;
+  background: var(--accent);
+}
+
+.badge.stale {
+  background: var(--accent-2);
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 0.9rem;
+}
+
+.card, .panel {
+  background: var(--panel);
+  border-radius: 16px;
+  padding: 1rem;
+  box-shadow: var(--shadow);
+  border: 1px solid #e7eeea;
+}
+
+.card p {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.card small {
+  color: var(--muted);
+}
+
+.state p.on {
+  color: var(--accent);
+}
+
+.state p.off {
+  color: var(--accent-2);
+}
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 1rem;
+}
+
+.gauges .gauge-wrap {
+  display: grid;
+  gap: 1rem;
+}
+
+.gauge-item {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.gauge-head {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 600;
+}
+
+.gauge-track {
+  width: 100%;
+  height: 14px;
+  border-radius: 999px;
+  background: #e8efeb;
+  overflow: hidden;
+}
+
+.gauge-track > div {
+  height: 100%;
+  width: 0;
+  transition: width 350ms ease;
+}
+
+#tempGaugeBar {
+  background: linear-gradient(90deg, #2f96ff, #d04b29);
+}
+
+#soilGaugeBar {
+  background: linear-gradient(90deg, #d04b29, #0a906f);
+}
+
+.panel-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.periods {
+  display: flex;
+  gap: 0.6rem;
+}
+
+button {
+  border: 1px solid transparent;
+  border-radius: 999px;
+  padding: 0.5rem 0.9rem;
+  cursor: pointer;
+  background: #ebf2ef;
+  font-weight: 600;
+}
+
+button.active,
+form button {
+  background: var(--accent);
+  color: white;
+}
+
+button:hover {
+  border-color: #b7d6cc;
+}
+
+.controls form {
+  display: grid;
+  gap: 0.7rem;
+}
+
+.controls label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 600;
+}
+
+.chart-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.chart-card {
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 0.8rem;
+}
+
+#timeline {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.6rem;
+}
+
+#timeline li {
+  padding: 0.65rem 0.75rem;
+  background: #f3f7f5;
+  border-radius: 12px;
+  border-left: 4px solid var(--accent);
+  display: grid;
+  gap: 0.15rem;
+}
+
+#timeline li small {
+  color: var(--muted);
+}
+
+.empty {
+  color: var(--muted);
+  border-left-color: #c7d4cf;
+}
+
+@media (max-width: 720px) {
+  .layout {
+    margin-top: 1rem;
+  }
+
+  .hero {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .hero-right {
+    text-align: left;
+  }
+
+  .grid-2 {
+    grid-template-columns: 1fr;
+  }
+
+  .panel-head {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
