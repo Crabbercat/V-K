@@ -4,11 +4,139 @@
 
 const deviceId = "esp32-001";
 let currentPeriod = "day";
+const themeStorageKey = "plantTheme";
+let currentTheme = "dark";
+
+const themePalette = {
+  dark: {
+    chartText: "#4d6b5c",
+    chartGrid: "rgba(255,255,255,0.02)",
+    tooltipBg: "rgba(10, 21, 18, 0.92)",
+    tooltipBorder: "rgba(255,255,255,0.06)",
+    tooltipText: "#dce8e0",
+  },
+  light: {
+    chartText: "#3f5a4e",
+    chartGrid: "rgba(18, 36, 26, 0.05)",
+    tooltipBg: "rgba(245, 248, 244, 0.96)",
+    tooltipBorder: "rgba(18, 36, 26, 0.08)",
+    tooltipText: "#153022",
+  },
+};
+
+const toastState = new Map();
+
+function ensureToastContainer() {
+  let container = document.getElementById("toastContainer");
+  if (container) return container;
+
+  container = document.createElement("div");
+  container.id = "toastContainer";
+  container.className = "toast-container";
+  container.setAttribute("aria-live", "polite");
+  container.setAttribute("aria-atomic", "true");
+  document.body.appendChild(container);
+  return container;
+}
+
+function formatToastMessage(message, count) {
+  return count > 1 ? `${message} (${count})` : message;
+}
+
+function showToast(message, type = "success", key = message) {
+  const container = ensureToastContainer();
+  const existing = toastState.get(key);
+
+  if (existing) {
+    existing.count += 1;
+    existing.messageEl.textContent = formatToastMessage(message, existing.count);
+    window.clearTimeout(existing.timerId);
+    existing.timerId = window.setTimeout(() => dismissToast(key), 2500);
+    return;
+  }
+
+  const toast = document.createElement("div");
+  toast.className = `toast toast-${type}`;
+
+  const icon = type === "error" ? "⚠️" : type === "info" ? "ℹ️" : "✅";
+  const messageEl = document.createElement("span");
+  messageEl.className = "toast-message";
+  messageEl.textContent = message;
+
+  toast.innerHTML = `<span class="toast-icon">${icon}</span>`;
+  toast.appendChild(messageEl);
+
+  container.appendChild(toast);
+  requestAnimationFrame(() => toast.classList.add("show"));
+
+  const timerId = window.setTimeout(() => dismissToast(key), 2500);
+  toastState.set(key, { toast, messageEl, count: 1, timerId });
+}
+
+function dismissToast(key) {
+  const state = toastState.get(key);
+  if (!state) return;
+
+  toastState.delete(key);
+  window.clearTimeout(state.timerId);
+  state.toast.classList.remove("show");
+  window.setTimeout(() => state.toast.remove(), 220);
+}
 
 /* ─── Chart.js Defaults ─── */
-Chart.defaults.color = "#4d6b5c";
-Chart.defaults.borderColor = "rgba(255, 255, 255, 0.03)";
+Chart.defaults.color = themePalette.dark.chartText;
+Chart.defaults.borderColor = themePalette.dark.chartGrid;
 Chart.defaults.font.family = "'Space Grotesk', system-ui, sans-serif";
+
+function getTheme() {
+  return currentTheme;
+}
+
+function applyTheme(theme) {
+  currentTheme = theme === "light" ? "light" : "dark";
+  document.documentElement.setAttribute("data-theme", currentTheme);
+  localStorage.setItem(themeStorageKey, currentTheme);
+
+  const palette = themePalette[currentTheme];
+  const toggle = document.getElementById("themeToggle");
+  const toggleIcon = document.getElementById("themeToggleIcon");
+  const toggleText = document.getElementById("themeToggleText");
+
+  if (toggle) {
+    toggle.setAttribute("aria-label", currentTheme === "dark" ? "Switch to light mode" : "Switch to dark mode");
+    toggle.title = currentTheme === "dark" ? "Switch to light mode" : "Switch to dark mode";
+  }
+  if (toggleIcon) toggleIcon.textContent = currentTheme === "dark" ? "🌙" : "☀️";
+  if (toggleText) toggleText.textContent = currentTheme === "dark" ? "Dark" : "Light";
+
+  Chart.defaults.color = palette.chartText;
+  Chart.defaults.borderColor = palette.chartGrid;
+
+  [tempChart, soilChart, luxChart].forEach((chart) => {
+    if (!chart) return;
+    chart.options.scales.x.grid.color = palette.chartGrid;
+    chart.options.scales.y.grid.color = palette.chartGrid;
+    chart.options.scales.x.ticks.color = palette.chartText;
+    chart.options.scales.y.ticks.color = palette.chartText;
+    chart.options.plugins.tooltip.backgroundColor = palette.tooltipBg;
+    chart.options.plugins.tooltip.borderColor = palette.tooltipBorder;
+    chart.options.plugins.tooltip.titleColor = palette.tooltipText;
+    chart.options.plugins.tooltip.bodyColor = palette.tooltipText;
+    chart.options.plugins.tooltip.footerColor = palette.tooltipText;
+    chart.update("none");
+  });
+}
+
+function initTheme() {
+  const savedTheme = localStorage.getItem(themeStorageKey);
+  if (savedTheme === "light" || savedTheme === "dark") {
+    applyTheme(savedTheme);
+    return;
+  }
+
+  const prefersLight = window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches;
+  applyTheme(prefersLight ? "light" : "dark");
+}
 
 const tempCtx = document.getElementById("tempChart").getContext("2d");
 const soilCtx = document.getElementById("soilChart").getContext("2d");
@@ -16,8 +144,8 @@ const luxCtx  = document.getElementById("luxChart").getContext("2d");
 
 function makeGradient(ctx, r, g, b) {
   const grad = ctx.createLinearGradient(0, 0, 0, 260);
-  grad.addColorStop(0, `rgba(${r},${g},${b},0.18)`);
-  grad.addColorStop(1, `rgba(${r},${g},${b},0.01)`);
+  grad.addColorStop(0, `rgba(${r},${g},${b},0.10)`);
+  grad.addColorStop(1, `rgba(${r},${g},${b},0.005)`);
   return grad;
 }
 
@@ -29,8 +157,11 @@ const chartOpts = {
   plugins: {
     legend: { display: false },
     tooltip: {
-      backgroundColor: "rgba(10, 21, 18, 0.92)",
-      borderColor: "rgba(255,255,255,0.06)",
+      backgroundColor: themePalette.dark.tooltipBg,
+      borderColor: themePalette.dark.tooltipBorder,
+      titleColor: themePalette.dark.tooltipText,
+      bodyColor: themePalette.dark.tooltipText,
+      footerColor: themePalette.dark.tooltipText,
       borderWidth: 1,
       padding: 8,
       cornerRadius: 8,
@@ -59,10 +190,10 @@ const tempChart = new Chart(tempCtx, {
       data: [],
       borderColor: "#FF8A65",
       backgroundColor: makeGradient(tempCtx, 255, 138, 101),
-      fill: true, tension: 0.4,
+      fill: true, tension: 0.3,
       pointRadius: 0, pointHoverRadius: 3,
       pointHoverBackgroundColor: "#FF8A65",
-      borderWidth: 2,
+      borderWidth: 1,
     }],
   },
   options: chartOpts,
@@ -77,10 +208,10 @@ const soilChart = new Chart(soilCtx, {
       data: [],
       borderColor: "#2ECC71",
       backgroundColor: makeGradient(soilCtx, 46, 204, 113),
-      fill: true, tension: 0.4,
+      fill: true, tension: 0.3,
       pointRadius: 0, pointHoverRadius: 3,
       pointHoverBackgroundColor: "#2ECC71",
-      borderWidth: 2,
+      borderWidth: 1,
     }],
   },
   options: chartOpts,
@@ -95,10 +226,10 @@ const luxChart = new Chart(luxCtx, {
       data: [],
       borderColor: "#FDD835",
       backgroundColor: makeGradient(luxCtx, 253, 216, 53),
-      fill: true, tension: 0.4,
+      fill: true, tension: 0.3,
       pointRadius: 0, pointHoverRadius: 3,
       pointHoverBackgroundColor: "#FDD835",
-      borderWidth: 2,
+      borderWidth: 1,
     }],
   },
   options: chartOpts,
@@ -132,6 +263,46 @@ function setTag(id, info) {
   if (!el) return;
   el.textContent = info.label;
   el.className = "status-tag " + info.cls;
+}
+
+function getHistoryPointLimit(period) {
+  if (period === "hour") return 24;
+  if (period === "week") return 84;
+  if (period === "day") return 48;
+  return 0;
+}
+
+function downsampleHistory(items, period) {
+  const limit = getHistoryPointLimit(period);
+  if (!limit || !Array.isArray(items) || items.length <= limit) {
+    return items || [];
+  }
+
+  const bucketSize = Math.ceil(items.length / limit);
+  const result = [];
+
+  for (let index = 0; index < items.length; index += bucketSize) {
+    const bucket = items.slice(index, index + bucketSize);
+    const sample = bucket[bucket.length - 1];
+
+    const tempValues = bucket.map((entry) => toNum(entry.temperature)).filter((value) => value != null);
+    const soilValues = bucket.map((entry) => toNum(entry.soilMoisture)).filter((value) => value != null);
+    const lightValues = bucket.map((entry) => toNum(entry.lightIntensity)).filter((value) => value != null);
+
+    const average = (values) => {
+      if (!values.length) return null;
+      return values.reduce((sum, value) => sum + value, 0) / values.length;
+    };
+
+    result.push({
+      timestamp: sample.timestamp,
+      temperature: average(tempValues),
+      soilMoisture: average(soilValues),
+      lightIntensity: average(lightValues),
+    });
+  }
+
+  return result;
 }
 
 /* ─── AI Feed ─── */
@@ -286,18 +457,19 @@ async function refreshHistory() {
     const res = await fetch(`/api/history?deviceId=${deviceId}&period=${currentPeriod}`);
     if (!res.ok) return;
     const d = await res.json();
-    const labels = d.items.map(x => new Date(x.timestamp).toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" }));
+    const historyItems = downsampleHistory(d.items || [], currentPeriod);
+    const labels = historyItems.map(x => new Date(x.timestamp).toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" }));
 
     tempChart.data.labels = labels;
-    tempChart.data.datasets[0].data = d.items.map(x => x.temperature);
+    tempChart.data.datasets[0].data = historyItems.map(x => x.temperature);
     tempChart.update();
 
     soilChart.data.labels = labels;
-    soilChart.data.datasets[0].data = d.items.map(x => x.soilMoisture);
+    soilChart.data.datasets[0].data = historyItems.map(x => x.soilMoisture);
     soilChart.update();
 
     luxChart.data.labels = labels;
-    luxChart.data.datasets[0].data = d.items.map(x => x.lightIntensity);
+    luxChart.data.datasets[0].data = historyItems.map(x => x.lightIntensity);
     luxChart.update();
   } catch (e) { console.warn("History:", e); }
 }
@@ -337,6 +509,11 @@ async function refreshEvents() {
 async function sendActuatorCommand(field, value, btnEl) {
   if (btnEl) btnEl.classList.add("sending");
 
+  const actionName = field === "pump" ? "Pump" : "Light";
+  const actionState = value ? "ON" : "OFF";
+  const toastKey = `${field}:${actionState}`;
+  const toastText = `${actionName} turned ${actionState}`;
+
   try {
     const payload = { deviceId };
     payload[field] = value;
@@ -347,11 +524,17 @@ async function sendActuatorCommand(field, value, btnEl) {
       body: JSON.stringify(payload),
     });
 
-    if (!res.ok) console.error("Command returned", res.status);
+    if (!res.ok) {
+      console.error("Command returned", res.status);
+      showToast(`${actionName} ${actionState} failed`, "error", `${field}:error:${actionState}`);
+      return;
+    }
 
     await Promise.all([refreshEvents(), refreshOverview()]);
+    showToast(toastText, value ? "success" : "info", toastKey);
   } catch (e) {
     console.error("Command failed:", e);
+    showToast(`${actionName} ${actionState} failed`, "error", `${field}:error:${actionState}`);
   } finally {
     if (btnEl) btnEl.classList.remove("sending");
   }
@@ -376,6 +559,10 @@ document.getElementById("btn-save-config").addEventListener("click", () => {
   setTimeout(() => { btn.textContent = orig; }, 1500);
 });
 
+document.getElementById("themeToggle").addEventListener("click", () => {
+  applyTheme(getTheme() === "dark" ? "light" : "dark");
+});
+
 /* ─── Init ─── */
 document.querySelectorAll(".period-btns button").forEach(btn => {
   btn.addEventListener("click", async () => {
@@ -385,6 +572,8 @@ document.querySelectorAll(".period-btns button").forEach(btn => {
     await refreshHistory();
   });
 });
+
+initTheme();
 
 /* Actuator buttons */
 document.getElementById("btn-pump-on").addEventListener("click",  (e) => sendActuatorCommand("pump",  true,  e.currentTarget));
