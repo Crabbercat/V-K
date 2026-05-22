@@ -1,10 +1,10 @@
 // ESP32 Photoresistor (LDR) Test
-// Pin: GPIO34 (ADC1)
+// Pin: GPIO36 (ADC1)
 // Circuit: LDR + fixed resistor as a voltage divider
 
 #include <Arduino.h>
 
-const uint8_t LDR_PIN = 26;  // GPIO34 - ADC1 input only
+const uint8_t LDR_PIN = 36;  // GPIO36 - ADC1 input only
 const uint32_t READ_INTERVAL_MS = 1000;
 
 unsigned long lastReadMs = 0;
@@ -16,7 +16,7 @@ void setup() {
   analogReadResolution(12);
   analogSetPinAttenuation(LDR_PIN, ADC_11db);
 
-  Serial.println("=== Quang tro / LDR Test (GPIO34) ===");
+  Serial.println("=== Quang tro / LDR Test (GPIO36) ===");
   Serial.println("Reading every 1 second...");
   Serial.println("Format: raw | mV | brightness%");
   Serial.println("Note: lower raw usually means darker, higher raw means brighter");
