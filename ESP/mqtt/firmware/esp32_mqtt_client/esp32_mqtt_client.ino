@@ -3,26 +3,26 @@
 #include <ArduinoJson.h>
 
 // ===== WiFi =====
-const char* WIFI_SSID = "YOUR_WIFI_SSID";
-const char* WIFI_PASS = "YOUR_WIFI_PASSWORD";
+const char* WIFI_SSID = "1.1.1.1";
+const char* WIFI_PASS = "112233445566";
 
 // ===== MQTT =====
-const char* MQTT_HOST = "192.168.1.100";
+const char* MQTT_HOST = "10.87.55.236";
 const uint16_t MQTT_PORT = 1883;
 const char* DEVICE_ID = "esp32-001";
 
-// ===== Pins (from migration spec) =====
+// ===== Pins =====
 const uint8_t SOIL_PIN = 34;
-const uint8_t TEMP_PIN = 35;  // LM35 default
+const uint8_t TEMP_PIN = 35;  // LM35
+const uint8_t LDR_PIN = 32;   // photoresistor (LDR)
+const uint8_t LIGHT_PWM_PIN = 27; // LED output, used to simulate lighting/heating
 const uint8_t PUMP_RELAY_PIN = 26;
-const uint8_t LIGHT_RELAY_PIN = 27;
-const uint8_t HEATER_RELAY_PIN = 25;
 
-// Calibrate these values based on your specific YL-69 sensor.
+// Calibrate these values for your YL-69 sensor.
 const int SOIL_ADC_DRY = 3200;
 const int SOIL_ADC_WET = 1400;
 
-// ===== Sensor timing =====
+// ===== Timing =====
 const unsigned long SENSOR_INTERVAL_MS = 10000;
 const unsigned long TELEMETRY_INTERVAL_MS = 30000;
 const unsigned long HEARTBEAT_INTERVAL_MS = 60000;
@@ -30,6 +30,7 @@ const unsigned long HEARTBEAT_INTERVAL_MS = 60000;
 struct SensorSnapshot {
   float temperature = 0.0f;
   int soilMoisture = 0;
+  int brightness = 0;
   unsigned long lastReadMs = 0;
 };
 
@@ -53,14 +54,7 @@ public:
     digitalWrite(_pin, _activeLow ? HIGH : LOW);
   }
 
-  void setState(bool on) {
-    if (on) {
-      turnOn();
-    } else {
-      turnOff();
-    }
-  }
-
+  void setState(bool on) { on ? turnOn() : turnOff(); }
   bool getState() const { return _state; }
 
 private:
@@ -69,12 +63,33 @@ private:
   bool _state;
 };
 
+class LightController {
+public:
+  explicit LightController(uint8_t pin) : _pin(pin), _level(0) {}
+
+  void begin() {
+    pinMode(_pin, OUTPUT);
+    ledcAttach(_pin, 1000, 8);
+    setLevel(0);
+  }
+
+  void setLevel(uint8_t level) {
+    _level = level;
+    ledcWrite(_pin, _level);
+  }
+
+  uint8_t getLevel() const { return _level; }
+
+private:
+  uint8_t _pin;
+  uint8_t _level;
+};
+
 WiFiClient wifiClient;
 PubSubClient mqttClient(wifiClient);
 SensorSnapshot sensors;
 RelayController waterPumpRelay(PUMP_RELAY_PIN);
-RelayController lightRelay(LIGHT_RELAY_PIN);
-RelayController heaterRelay(HEATER_RELAY_PIN);
+LightController lightController(LIGHT_PWM_PIN);
 
 unsigned long lastSensorReadMs = 0;
 unsigned long lastTelemetryMs = 0;
@@ -105,8 +120,8 @@ void publishStatus(bool online) {
   doc["deviceId"] = DEVICE_ID;
   doc["online"] = online;
   doc["pump"] = waterPumpRelay.getState();
-  doc["light"] = lightRelay.getState();
-  doc["heater"] = heaterRelay.getState();
+  doc["lightLevel"] = lightController.getLevel();
+  doc["brightness"] = sensors.brightness;
   doc["timestamp"] = millis();
 
   String payload;
@@ -126,18 +141,16 @@ void mqttCallback(char* topic, byte* payload, unsigned int length) {
   bool changed = false;
 
   if (doc.containsKey("pump")) {
-    bool value = doc["pump"];
-    waterPumpRelay.setState(value);
+    waterPumpRelay.setState(doc["pump"]);
     changed = true;
   }
-  if (doc.containsKey("light")) {
-    bool value = doc["light"];
-    lightRelay.setState(value);
+
+  if (doc.containsKey("lightLevel")) {
+    int level = constrain((int)doc["lightLevel"], 0, 255);
+    lightController.setLevel((uint8_t)level);
     changed = true;
-  }
-  if (doc.containsKey("heater")) {
-    bool value = doc["heater"];
-    heaterRelay.setState(value);
+  } else if (doc.containsKey("light")) {
+    lightController.setLevel(doc["light"] ? 255 : 0);
     changed = true;
   }
 
@@ -170,13 +183,18 @@ void ensureMqttConnected() {
 void readSensors() {
   int soilRaw = analogRead(SOIL_PIN);
   int soilPercent = map(soilRaw, SOIL_ADC_DRY, SOIL_ADC_WET, 0, 100);
-  soilPercent = constrain(soilPercent, 0, 100);
-  sensors.soilMoisture = soilPercent;
+  sensors.soilMoisture = constrain(soilPercent, 0, 100);
+
   uint32_t tempMilliVolts = analogReadMilliVolts(TEMP_PIN);
   sensors.temperature = tempMilliVolts / 10.0f;
-  sensors.lastReadMs = millis();
 
-  Serial.printf("[SENSOR] temp=%.2fC soil=%d%% (raw=%d)\n", sensors.temperature, sensors.soilMoisture, soilRaw);
+  uint16_t ldrRaw = analogRead(LDR_PIN);
+  int brightnessPercent = map(ldrRaw, 0, 4095, 100, 0);
+  sensors.brightness = constrain(brightnessPercent, 0, 100);
+
+  sensors.lastReadMs = millis();
+  Serial.printf("[SENSOR] temp=%.2fC soil=%d%% ldr=%d%% (soilRaw=%d ldrRaw=%d)\n",
+                sensors.temperature, sensors.soilMoisture, sensors.brightness, soilRaw, ldrRaw);
 }
 
 void publishTelemetry() {
@@ -184,6 +202,8 @@ void publishTelemetry() {
   doc["deviceId"] = DEVICE_ID;
   doc["temperature"] = sensors.temperature;
   doc["soilMoisture"] = sensors.soilMoisture;
+  doc["brightness"] = sensors.brightness;
+  doc["lightLevel"] = lightController.getLevel();
   doc["timestamp"] = millis();
 
   String payload;
@@ -200,10 +220,10 @@ void setup() {
   analogReadResolution(12);
   analogSetPinAttenuation(SOIL_PIN, ADC_11db);
   analogSetPinAttenuation(TEMP_PIN, ADC_11db);
+  analogSetPinAttenuation(LDR_PIN, ADC_11db);
 
   waterPumpRelay.begin();
-  lightRelay.begin();
-  heaterRelay.begin();
+  lightController.begin();
 
   topicTelemetry = String("plant/device/") + DEVICE_ID + "/telemetry";
   topicStatus = String("plant/device/") + DEVICE_ID + "/status";

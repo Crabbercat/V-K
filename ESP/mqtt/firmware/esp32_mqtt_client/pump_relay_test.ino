@@ -1,6 +1,8 @@
 // ESP32 Water Pump Relay Test
 // Pin: GPIO26
 // Toggles ON/OFF every 2 seconds
+// Typical relay modules are used to switch the pump power.
+// Ensure the relay is rated for the pump voltage/current and wire the pump power through the relay contacts.
 
 #include <Arduino.h>
 
@@ -15,6 +17,7 @@ void setup() {
   delay(1000);
 
   pinMode(PUMP_RELAY_PIN, OUTPUT);
+  // Default off
   digitalWrite(PUMP_RELAY_PIN, LOW);
 
   Serial.println("=== Pump Relay Test (GPIO26) ===");
@@ -29,5 +32,5 @@ void loop() {
 
   pumpOn = !pumpOn;
   digitalWrite(PUMP_RELAY_PIN, pumpOn ? HIGH : LOW);
-  Serial.printf("Pump: %s\n", pumpOn ? "ON" : "OFF");
+  Serial.printf("Pump (relay) state: %s\n", pumpOn ? "ON" : "OFF");
 }

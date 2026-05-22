@@ -29,6 +29,7 @@ Firmware refactored from the HTTP version (`ESP/http/esp_http_client`) to MQTT +
 
 Test sketches are in `esp32_mqtt_client/`:
 
+- `mqtt_fake_telemetry_test.ino`
 - `pump_relay_test.ino`
 - `light_relay_test.ino`
 - `heater_relay_test.ino`
